@@ -5,70 +5,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English Mock Test for Kids</title>
     <style>
-      /* CSS for the quiz layout */
+      /* Enhanced CSS for a fun quiz layout */
       body {
         font-family: "Comic Sans MS", cursive, sans-serif;
-        background-color: #f0f8ff;
+        background: linear-gradient(to right, #ffefba, #ffffff);
         text-align: center;
         margin: 0;
         padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Hide overflow for fireworks */
       }
       h1 {
         color: #ff6347;
+        font-size: 3em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       }
       .question-container {
         margin: 20px auto;
-        padding: 15px;
-        background-color: #f5f5f5;
-        border-radius: 10px;
-        width: 80%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        background: #fff7e6;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        position: relative; /* For fireworks effect */
+      }
+      .question-container:hover {
+        transform: scale(1.05);
       }
       .question {
-        font-size: 1.5em;
+        font-size: 1.8em;
+        color: #ff7f50;
+        margin-bottom: 20px;
       }
       .options {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        margin-top: 15px;
-      }
-      .option {
-        background-color: #87cefa;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        width: 60%;
-        font-size: 1em;
-        transition: background-color 0.3s;
-      }
-      .option:hover {
-        background-color: #4682b4;
-      }
-      #result {
-        font-size: 1.2em;
-        color: green;
+        gap: 15px;
         margin-top: 20px;
       }
-      #score {
+      .option {
+        background-color: #ffeb3b;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        width: 80%;
+        max-width: 400px;
         font-size: 1.2em;
+        color: #333;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .option:hover {
+        background-color: #ffc107;
+        transform: translateY(-5px);
+      }
+      /* Animation for correct answer */
+      .correct-answer {
+        animation: flashCorrect 1s ease forwards;
+      }
+      @keyframes flashCorrect {
+        0% {
+          background-color: #32cd32;
+          transform: scale(1);
+        }
+        50% {
+          background-color: #7cfc00;
+          transform: scale(1.2);
+        }
+        100% {
+          background-color: #32cd32;
+          transform: scale(1);
+        }
+      }
+      /* Fireworks container */
+      .fireworks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1; /* Place behind quiz content */
+      }
+      .firework {
+        position: absolute;
+        bottom: 0;
+        width: 5px;
+        height: 5px;
+        background: transparent;
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(0);
+        animation: firework 1s ease-out forwards;
+      }
+      @keyframes firework {
+        0% {
+          opacity: 1;
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
+      /* Styling for feedback text */
+      #result {
+        font-size: 1.5em;
+        margin-top: 20px;
+        min-height: 30px; /* Ensure space is maintained */
+      }
+      #score {
+        font-size: 1.5em;
         color: #ff6347;
-        margin-top: 10px;
+        margin-top: 20px;
       }
       #next-btn {
         background-color: #32cd32;
         color: white;
-        padding: 10px 20px;
+        padding: 12px 25px;
         border: none;
-        border-radius: 5px;
+        border-radius: 50px;
         cursor: pointer;
-        margin-top: 20px;
-        transition: background-color 0.3s;
+        margin-top: 30px;
+        font-size: 1.2em;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.3s;
       }
       #next-btn:hover {
         background-color: #228b22;
+        transform: translateY(-5px);
+      }
+      #next-btn:active {
+        transform: translateY(0);
+      }
+
+      /* Fireworks container */
+      .fireworks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1; /* Place behind quiz content */
+      }
+
+      .firework {
+        position: absolute;
+        bottom: 0;
+        width: 5px;
+        height: 5px;
+        background: transparent;
+        border-radius: 50%;
+        opacity: 0;
+        animation: firework 1.4s ease-out forwards;
+      }
+
+      /* Firework animation */
+      @keyframes firework {
+        0% {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.5) translateY(-200px);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0) translateY(-300px);
+        }
       }
     </style>
   </head>
@@ -635,6 +755,37 @@
             `;
       }
 
+      function createFireworks() {
+        const fireworksContainer = document.createElement("div");
+        fireworksContainer.classList.add("fireworks");
+
+        // Create multiple fireworks with different colors
+        for (let i = 0; i < 20; i++) {
+          const firework = document.createElement("div");
+          firework.classList.add("firework");
+          const size = Math.random() * 8 + 4; // Make it larger for visibility
+          const x = Math.random() * window.innerWidth;
+          const delay = Math.random() * 0.5;
+
+          firework.style.width = `${size}px`;
+          firework.style.height = `${size}px`;
+          firework.style.left = `${x}px`;
+          firework.style.backgroundColor = `hsl(${
+            Math.random() * 360
+          }, 100%, 50%)`; // Random color
+          firework.style.animationDelay = `${delay}s`;
+
+          fireworksContainer.appendChild(firework);
+        }
+
+        document.body.appendChild(fireworksContainer);
+
+        // Remove fireworks after animation
+        setTimeout(() => {
+          fireworksContainer.remove();
+        }, 2000);
+      }
+
       function checkAnswer(selectedOption) {
         let question = questions[currentQuestion];
         let resultContainer = document.getElementById("result");
@@ -643,6 +794,12 @@
         if (selectedOption === question.correct) {
           score++;
           resultContainer.innerHTML = "Correct!";
+
+          // Add the flashing animation class
+          event.target.classList.add("correct-answer");
+
+          // Trigger fireworks effect
+          createFireworks();
         } else {
           resultContainer.innerHTML = `Wrong! The correct answer is: ${question.correct}`;
         }
