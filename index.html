@@ -6,153 +6,194 @@
     <title>English Mock Test for Kids</title>
 
     <style>
-      body {
-        font-family: "Comic Sans
-    MS", cursive, sans-serif;
-        background: linear-gradient(to right, #ffefba, #ffffff);
-        text-align: center;
-        margin: 0;
-        padding: 20px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden; /* Hide overflow for fireworks */
-      }
-      h1 {
-        color: #ff6347;
-        font-size: 3em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      .question-container {
-        margin: 20px auto;
-        padding: 20px;
-        background: #fff7e6;
-        border-radius: 15px;
-        width: 90%;
-        max-width: 600px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        position: relative; /*
-    For fireworks effect */
-      }
-      .question-container:hover {
-        transform: scale(1.05);
-      }
-      .question {
-        font-size: 1.8em;
-        color: #ff7f50;
-        margin-bottom: 20px;
-      }
-      .options {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin-top: 20px;
-      }
-      .option {
-        background-color: #ffeb3b;
-        padding: 12px 25px;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        width: 80%;
-        max-width: 400px;
-        font-size: 1.2em;
-        color: #333;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s, transform 0.3s;
-      }
-      .option:hover {
-        background-color: #ffc107;
-        transform: translateY(-5px);
-      } /* Animation for correct answer */
-      .correct-answer {
-        animation: flashCorrect 1s ease forwards;
-      }
-      @keyframes flashCorrect {
-        0% {
-          background-color: #32cd32;
-          transform: scale(1);
-        }
-        50% {
-          background-color: #7cfc00;
-          transform: scale(1.2);
-        }
-        100% {
-          background-color: #32cd32;
-          transform: scale(1);
-        }
-      } /* Fireworks container */
-      .fireworks {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        pointer-events: none;
-        overflow: hidden;
-        z-index: 1; /* Place behind quiz content */
-      }
-      .firework {
-        position: absolute;
-        bottom: 0;
-        width: 5px;
-        height: 5px;
-        background: transparent;
-        border-radius: 50%;
-        opacity: 0;
-        animation: firework 1.4s ease-out forwards;
-      } /* Firework animation */
-      @keyframes firework {
-        0% {
-          opacity: 1;
-          transform: scale(1) translateY(0);
-        }
-        50% {
-          opacity: 1;
-          transform: scale(1.5) translateY(-200px);
-        }
-        100% {
-          opacity: 0;
-          transform: scale(0) translateY(-300px);
-        }
-      } /* Styling for feedback text */
-      #result {
-        font-size: 1.5em;
-        margin-top: 20px;
-        min-height: 30px; /* Ensure space is
-    maintained */
-      }
-      #score {
-        font-size: 1.5em;
-        color: #ff6347;
-        margin-top: 20px;
-      }
-      #next-btn {
-        background-color: #32cd32;
-        color: white;
-        padding: 12px 25px;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        margin: 10%;
-        font-size: 1.2em;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s, transform 0.3s;
-        position: fixed; /* Fix to bottom */
-        bottom: 20px; /* Position 20px from bottom */
-        left: 20px; /* Move it 20px from the left */
-        transform: translateX(0); /* No centering needed */
-        z-index: 10; /* Ensure it appears above other elements */
+            body {
+              font-family: "Comic Sans
+          MS", cursive, sans-serif;
+              background: linear-gradient(to right, #ffefba, #ffffff);
+              text-align: center;
+              margin: 0;
+              padding: 20px;
+              min-height: 100vh;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden; /* Hide overflow for fireworks */
+            }
+            h1 {
+              color: #ff6347;
+              font-size: 3em;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .question-container {
+              margin: 20px auto;
+              padding: 20px;
+              background: #fff7e6;
+              border-radius: 15px;
+              width: 90%;
+              max-width: 600px;
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s ease;
+              position: relative; /*
+          For fireworks effect */
+            }
+            .question-container:hover {
+              transform: scale(1.05);
+            }
+            .question {
+              font-size: 1.8em;
+              color: #ff7f50;
+              margin-bottom: 20px;
+            }
+            .options {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 15px;
+              margin-top: 20px;
+            }
+            .option {
+              background-color: #ffeb3b;
+              padding: 12px 25px;
+              border: none;
+              border-radius: 50px;
+              cursor: pointer;
+              width: 80%;
+              max-width: 400px;
+              font-size: 1.2em;
+              color: #333;
+              box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+              transition: background-color 0.3s, transform 0.3s;
+            }
+            .option:hover {
+              background-color: #ffc107;
+              transform: translateY(-5px);
+            } /* Animation for correct answer */
+            .correct-answer {
+              animation: flashCorrect 1s ease forwards;
+            }
+            @keyframes flashCorrect {
+              0% {
+                background-color: #32cd32;
+                transform: scale(1);
+              }
+              50% {
+                background-color: #7cfc00;
+                transform: scale(1.2);
+              }
+              100% {
+                background-color: #32cd32;
+                transform: scale(1);
+              }
+            } /* Fireworks container */
+            .fireworks {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              pointer-events: none;
+              overflow: hidden;
+              z-index: 1; /* Place behind quiz content */
+            }
+            .firework {
+              position: absolute;
+              bottom: 0;
+              width: 5px;
+              height: 5px;
+              background: transparent;
+              border-radius: 50%;
+              opacity: 0;
+              animation: firework 1.4s ease-out forwards;
+            } /* Firework animation */
+            @keyframes firework {
+              0% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+              }
+              50% {
+                opacity: 1;
+                transform: scale(1.5) translateY(-200px);
+              }
+              100% {
+                opacity: 0;
+                transform: scale(0) translateY(-300px);
+              }
+            } /* Styling for feedback text */
+            #result {
+              font-size: 1.5em;
+              margin-top: 20px;
+              min-height: 30px; /* Ensure space is
+          maintained */
+            }
+            #score {
+              font-size: 1.5em;
+              color: #ff6347;
+              margin-top: 20px;
+            }
+            #next-btn {
+              background-color: #32cd32;
+              color: white;
+              padding: 12px 25px;
+              border: none;
+              border-radius: 50px;
+              cursor: pointer;
+              margin: 10%;
+              font-size: 1.2em;
+              box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+              transition: background-color 0.3s, transform 0.3s;
+              position: fixed; /* Fix to bottom */
+              bottom: 20px; /* Position 20px from bottom */
+              left: 20px; /* Move it 20px from the left */
+              transform: translateX(0); /* No centering needed */
+              z-index: 10; /* Ensure it appears above other elements */
+            }
+
+            #next-btn:hover {
+              background-color: #228b22;
+              transform: translateY(-5px); /* Adjust hover movement */
+            }
+
+            /* Media Queries for Smaller Screens */
+      @media (max-width: 768px) {
+          h1 {
+              font-size: 2.5em;
+          }
+
+          .question {
+              font-size: 1.5em;
+          }
+
+          .option {
+              padding: 10px 20px;
+              font-size: 1.1em;
+          }
+
+          #next-btn {
+              padding: 10px 20px;
+              font-size: 1em;
+          }
       }
 
-      #next-btn:hover {
-        background-color: #228b22;
-        transform: translateY(-5px); /* Adjust hover movement */
-      }
+      @media (max-width: 480px) {
+          h1 {
+              font-size: 2em;
+          }
+
+          .question {
+              font-size: 1.2em;
+          }
+
+          .option {
+              padding: 8px 15px;
+              font-size: 1em;
+          }
+
+          #next-btn {
+              padding: 8px 15px;
+              font-size: 0.9em;
+              bottom: 10px; /* Move closer to the bottom on very small screens */
+          }
     </style>
   </head>
   <body>
@@ -317,7 +358,7 @@
             "She running fast.",
             "She runned fast.",
           ],
-          correct: "She runs fast",
+          correct: "She runs fast.",
         },
         {
           question: "Which of these is a correct sentence?",
@@ -347,7 +388,7 @@
             "The dog is barking.",
             "The dogs are barked.",
           ],
-          correct: "The dog is barking",
+          correct: "The dog is barking.",
         },
         {
           question: "Fill in the blank: 'She ___ her homework.'",
@@ -377,7 +418,7 @@
             "She didn't likes apples.",
             "She does likes apples.",
           ],
-          correct: "She doesn't like apples",
+          correct: "She doesn't like apples.",
         },
         {
           question: "Fill in the blank: 'The car is ___ than the bike.'",
@@ -397,7 +438,7 @@
             "They is playing.",
             "They are played.",
           ],
-          correct: "They were playing",
+          correct: "They were playing.",
         },
         {
           question: "Fill in the blank: 'The baby is ___.'",
@@ -417,7 +458,7 @@
             "The boys like apple.",
             "The boy liking apples.",
           ],
-          correct: "The boy likes apples",
+          correct: "The boy likes apples.",
         },
         {
           question: "Fill in the blank: 'She is ___ the song.'",
@@ -437,7 +478,7 @@
             "We am friends.",
             "We are friend.",
           ],
-          correct: "We are friends",
+          correct: "We are friends.",
         },
         {
           question: "Fill in the blank: 'The ___ is shining.'",
@@ -457,7 +498,7 @@
             "She didn't dances.",
             "She does dances.",
           ],
-          correct: "She doesn't dance",
+          correct: "She doesn't dance.",
         },
         {
           question:
@@ -468,7 +509,7 @@
             "The cat is black.",
             "Cat is black the.",
           ],
-          correct: "The cat is black",
+          correct: "The cat is black.",
         },
         {
           question: "Complete the sentence: 'The boy ___ a kite.'",
@@ -483,7 +524,7 @@
             "Can swim she.",
             "She swim can.",
           ],
-          correct: "She can swim",
+          correct: "She can swim.",
         },
         {
           question: "Complete the sentence: 'The sun ___ in the east.'",
@@ -499,7 +540,7 @@
             "Dog is barking the.",
             "Is barking the dog.",
           ],
-          correct: "The dog is barking",
+          correct: "The dog is barking.",
         },
         {
           question: "Choose the correct sentence:",
@@ -509,7 +550,7 @@
             "He reading is.",
             "He read is.",
           ],
-          correct: "He is reading",
+          correct: "He is reading.",
         },
         {
           question: "Complete the sentence: 'The flowers ___ in the garden.'",
@@ -525,7 +566,7 @@
             "Fish swim in the water.",
             "In water the fish swim.",
           ],
-          correct: "The fish swim in water",
+          correct: "The fish swim in water.",
         },
         {
           question: "Choose the correct sentence:",
@@ -535,7 +576,7 @@
             "Cream ice likes she.",
             "She ice cream likes.",
           ],
-          correct: "She likes ice cream",
+          correct: "She likes ice cream.",
         },
         {
           question: "Complete the sentence: 'The ___ is shining.'",
@@ -551,7 +592,7 @@
             "The birds are flying.",
             "Flying are the birds.",
           ],
-          correct: "The birds are flying",
+          correct: "The birds are flying.",
         },
         {
           question: "Choose the correct sentence:",
@@ -561,7 +602,7 @@
             "They friends are.",
             "Friends they are.",
           ],
-          correct: "They are friends",
+          correct: "They are friends.",
         },
         {
           question: "Complete the sentence: 'The dog ___ at the cat.'",
@@ -577,7 +618,7 @@
             "The cat sits on the chair.",
             "Cat sits the on chair.",
           ],
-          correct: "The cat sits on the chair",
+          correct: "The cat sits on the chair.",
         },
         {
           question: "Choose the correct sentence:",
@@ -587,7 +628,7 @@
             "Dancing is she.",
             "Dancing she is.",
           ],
-          correct: "She is dancing",
+          correct: "She is dancing.",
         },
         {
           question:
