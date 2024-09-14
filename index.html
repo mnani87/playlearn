@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English Mock Test for Kids</title>
+
     <style>
-      /* Enhanced CSS for a fun quiz layout */
       body {
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-family: "Comic Sans
+    MS", cursive, sans-serif;
         background: linear-gradient(to right, #ffefba, #ffffff);
         text-align: center;
         margin: 0;
@@ -33,7 +34,8 @@
         max-width: 600px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
-        position: relative; /* For fireworks effect */
+        position: relative; /*
+    For fireworks effect */
       }
       .question-container:hover {
         transform: scale(1.05);
@@ -66,8 +68,7 @@
       .option:hover {
         background-color: #ffc107;
         transform: translateY(-5px);
-      }
-      /* Animation for correct answer */
+      } /* Animation for correct answer */
       .correct-answer {
         animation: flashCorrect 1s ease forwards;
       }
@@ -84,8 +85,7 @@
           background-color: #32cd32;
           transform: scale(1);
         }
-      }
-      /* Fireworks container */
+      } /* Fireworks container */
       .fireworks {
         position: fixed;
         top: 0;
@@ -104,28 +104,27 @@
         background: transparent;
         border-radius: 50%;
         opacity: 0;
-        transform: scale(0);
-        animation: firework 1s ease-out forwards;
-      }
+        animation: firework 1.4s ease-out forwards;
+      } /* Firework animation */
       @keyframes firework {
         0% {
           opacity: 1;
-          transform: scale(0);
+          transform: scale(1) translateY(0);
         }
         50% {
           opacity: 1;
-          transform: scale(1);
+          transform: scale(1.5) translateY(-200px);
         }
         100% {
           opacity: 0;
-          transform: scale(0);
+          transform: scale(0) translateY(-300px);
         }
-      }
-      /* Styling for feedback text */
+      } /* Styling for feedback text */
       #result {
         font-size: 1.5em;
         margin-top: 20px;
-        min-height: 30px; /* Ensure space is maintained */
+        min-height: 30px; /* Ensure space is
+    maintained */
       }
       #score {
         font-size: 1.5em;
@@ -143,68 +142,10 @@
         font-size: 1.2em;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         transition: background-color 0.3s, transform 0.3s;
-      }
-      #next-btn:hover {
-        background-color: #228b22;
-        transform: translateY(-5px);
-      }
-      #next-btn:active {
-        transform: translateY(0);
-      }
-
-      /* Fireworks container */
-      .fireworks {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        pointer-events: none;
-        overflow: hidden;
-        z-index: 1; /* Place behind quiz content */
-      }
-
-      .firework {
-        position: absolute;
-        bottom: 0;
-        width: 5px;
-        height: 5px;
-        background: transparent;
-        border-radius: 50%;
-        opacity: 0;
-        animation: firework 1.4s ease-out forwards;
-      }
-
-      /* Firework animation */
-      @keyframes firework {
-        0% {
-          opacity: 1;
-          transform: scale(1) translateY(0);
-        }
-        50% {
-          opacity: 1;
-          transform: scale(1.5) translateY(-200px);
-        }
-        100% {
-          opacity: 0;
-          transform: scale(0) translateY(-300px);
-        }
-      }
-
-      #next-btn {
-        background-color: #32cd32;
-        color: white;
-        padding: 12px 25px;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        margin-top: 30px;
-        font-size: 1.2em;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s, transform 0.3s;
         position: fixed; /* Fix to bottom */
         bottom: 20px; /* Position 20px from bottom */
-        left: 50%; /* Center horizontally */
+        left: 50%; /* Center
+    horizontally */
         transform: translateX(-50%); /* Adjust position to center */
         z-index: 10; /* Ensure it appears above other elements */
       }
