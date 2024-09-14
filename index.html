@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Mock Test for Kids</title>
+    <style>
+      /* CSS for the quiz layout */
+      body {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        background-color: #f0f8ff;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: #ff6347;
+      }
+      .question-container {
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        width: 80%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .question {
+        font-size: 1.5em;
+      }
+      .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .option {
+        background-color: #87cefa;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 60%;
+        font-size: 1em;
+        transition: background-color 0.3s;
+      }
+      .option:hover {
+        background-color: #4682b4;
+      }
+      #result {
+        font-size: 1.2em;
+        color: green;
+        margin-top: 20px;
+      }
+      #score {
+        font-size: 1.2em;
+        color: #ff6347;
+        margin-top: 10px;
+      }
+      #next-btn {
+        background-color: #32cd32;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+      #next-btn:hover {
+        background-color: #228b22;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Have fun with English</h1>
+    <div id="quiz-container">
+      <div id="question-container" class="question-container"></div>
+      <div id="result"></div>
+      <div id="score">Points: 0</div>
+      <button id="next-btn" onclick="nextQuestion()">Next Question</button>
+    </div>
+
+    <script>
+      // JavaScript for quiz logic
+      let questions = [
+        // 100 Questions
+        {
+          question: "Which word means the same as 'happy'?",
+          options: ["Sad", "Joyful", "Angry", "Lazy"],
+          correct: "Joyful",
+        },
+        {
+          question: "Which word is similar to 'fast'?",
+          options: ["Slow", "Quick", "Tiny", "Hard"],
+          correct: "Quick",
+        },
+        {
+          question: "Which word is a synonym for 'big'?",
+          options: ["Large", "Small", "Light", "Narrow"],
+          correct: "Large",
+        },
+        {
+          question: "What is the antonym of 'hot'?",
+          options: ["Cold", "Warm", "Boiling", "Freezing"],
+          correct: "Cold",
+        },
+        {
+          question: "What is the opposite of 'happy'?",
+          options: ["Joyful", "Sad", "Cheerful", "Excited"],
+          correct: "Sad",
+        },
+        {
+          question: "Which word means the opposite of 'day'?",
+          options: ["Night", "Morning", "Evening", "Afternoon"],
+          correct: "Night",
+        },
+        {
+          question: "What is the antonym of 'loud'?",
+          options: ["Silent", "Noisy", "Soft", "Quiet"],
+          correct: "Silent",
+        },
+        {
+          question: "Which word is the opposite of 'dark'?",
+          options: ["Light", "Black", "Bright", "Shadow"],
+          correct: "Light",
+        },
+        {
+          question: "What is the opposite of 'near'?",
+          options: ["Close", "Distant", "Next", "End"],
+          correct: "Distant",
+        },
+        {
+          question: "Which word means the opposite of 'old'?",
+          options: ["New", "Young", "Aged", "Modern"],
+          correct: "New",
+        },
+        {
+          question: "What is the antonym of 'hard'?",
+          options: ["Soft", "Tough", "Strong", "Rough"],
+          correct: "Soft",
+        },
+        {
+          question: "Which word is the opposite of 'clean'?",
+          options: ["Dirty", "Neat", "Tidy", "Wash"],
+          correct: "Dirty",
+        },
+        {
+          question: "What is the opposite of 'up'?",
+          options: ["Down", "Over", "High", "Low"],
+          correct: "Down",
+        },
+        {
+          question: "Which word means the opposite of 'inside'?",
+          options: ["Within", "Outside", "Around", "Beside"],
+          correct: "Outside",
+        },
+        {
+          question: "What is the opposite of 'full'?",
+          options: ["Empty", "Whole", "Large", "Big"],
+          correct: "Empty",
+        },
+        {
+          question: "Which word means the opposite of 'above'?",
+          options: ["Below", "Over", "Next", "Top"],
+          correct: "Below",
+        },
+        {
+          question: "What is the antonym of 'soft'?",
+          options: ["Hard", "Gentle", "Smooth", "Quiet"],
+          correct: "Hard",
+        },
+        {
+          question: "Which word is the opposite of 'start'?",
+          options: ["Stop", "Begin", "Run", "Jump"],
+          correct: "Stop",
+        },
+        {
+          question: "What is the opposite of 'open'?",
+          options: ["Close", "Shut", "Lock", "Enter"],
+          correct: "Close",
+        },
+        {
+          question: "Which word means the opposite of 'give'?",
+          options: ["Take", "Offer", "Share", "Pass"],
+          correct: "Take",
+        },
+        {
+          question: "Choose the noun in the sentence: 'The cat is sleeping.'",
+          options: ["Sleeping", "Cat", "Is", "The"],
+          correct: "Cat",
+        },
+        {
+          question: "Identify the verb in the sentence: 'She runs fast.'",
+          options: ["She", "Runs", "Fast", "The"],
+          correct: "Runs",
+        },
+        {
+          question: "Which sentence is correct?",
+          options: [
+            "I is happy.",
+            "He are here.",
+            "They is dancing.",
+            "She is singing.",
+          ],
+          correct: "She is singing",
+        },
+        {
+          question: "Fill in the blank: 'The sun ___ in the sky.'",
+          options: ["shine", "shines", "shined", "shining"],
+          correct: "shines",
+        },
+        {
+          question: "Choose the pronoun: 'He is my friend.'",
+          options: ["He", "Is", "Friend", "My"],
+          correct: "He",
+        },
+        {
+          question: "Which word is an adjective?",
+          options: ["Run", "Happy", "Quickly", "Yesterday"],
+          correct: "Happy",
+        },
+        {
+          question: "What is the plural of 'child'?",
+          options: ["Childs", "Childes", "Children", "Childrens"],
+          correct: "Children",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "She run fast.",
+            "She runs fast.",
+            "She running fast.",
+            "She runned fast.",
+          ],
+          correct: "She runs fast",
+        },
+        {
+          question: "Which of these is a correct sentence?",
+          options: [
+            "I is tall.",
+            "He am here.",
+            "They are playing.",
+            "She are smart.",
+          ],
+          correct: "They are playing",
+        },
+        {
+          question: "Fill in the blank: 'The birds are ___ in the sky.'",
+          options: ["fly", "flies", "flying", "flied"],
+          correct: "flying",
+        },
+        {
+          question: "What is the past tense of 'go'?",
+          options: ["Go", "Going", "Went", "Goes"],
+          correct: "Went",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "The dog are barking.",
+            "The dogs is barking.",
+            "The dog is barking.",
+            "The dogs are barked.",
+          ],
+          correct: "The dog is barking",
+        },
+        {
+          question: "Fill in the blank: 'She ___ her homework.'",
+          options: ["do", "does", "doing", "done"],
+          correct: "does",
+        },
+        {
+          question: "Which word is an adverb?",
+          options: ["Run", "Quickly", "Tall", "Heavy"],
+          correct: "Quickly",
+        },
+        {
+          question: "Choose the correct plural form:",
+          options: ["Boxs", "Boxes", "Boxies", "Boxed"],
+          correct: "Boxes",
+        },
+        {
+          question: "Fill in the blank: 'He ___ a book.'",
+          options: ["read", "reads", "reading", "readed"],
+          correct: "reads",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "She don't like apples.",
+            "She doesn't like apples.",
+            "She didn't likes apples.",
+            "She does likes apples.",
+          ],
+          correct: "She doesn't like apples",
+        },
+        {
+          question: "Fill in the blank: 'The car is ___ than the bike.'",
+          options: ["fast", "faster", "fastest", "more fast"],
+          correct: "faster",
+        },
+        {
+          question: "What is the past tense of 'eat'?",
+          options: ["Eat", "Eated", "Ate", "Eats"],
+          correct: "Ate",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "They was playing.",
+            "They were playing.",
+            "They is playing.",
+            "They are played.",
+          ],
+          correct: "They were playing",
+        },
+        {
+          question: "Fill in the blank: 'The baby is ___.'",
+          options: ["sleep", "sleeps", "sleeping", "sleeped"],
+          correct: "sleeping",
+        },
+        {
+          question: "What is the plural of 'mouse'?",
+          options: ["Mouses", "Mices", "Mice", "Mousees"],
+          correct: "Mice",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "The boy like apples.",
+            "The boy likes apples.",
+            "The boys like apple.",
+            "The boy liking apples.",
+          ],
+          correct: "The boy likes apples",
+        },
+        {
+          question: "Fill in the blank: 'She is ___ the song.'",
+          options: ["sing", "sings", "singing", "singed"],
+          correct: "singing",
+        },
+        {
+          question: "What is the opposite of 'tall'?",
+          options: ["Short", "High", "Large", "Big"],
+          correct: "Short",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "We is friends.",
+            "We are friends.",
+            "We am friends.",
+            "We are friend.",
+          ],
+          correct: "We are friends",
+        },
+        {
+          question: "Fill in the blank: 'The ___ is shining.'",
+          options: ["moon", "sun", "stars", "earth"],
+          correct: "sun",
+        },
+        {
+          question: "What is the past tense of 'see'?",
+          options: ["See", "Saw", "Seen", "Seeing"],
+          correct: "Saw",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "She don't dance.",
+            "She doesn't dance.",
+            "She didn't dances.",
+            "She does dances.",
+          ],
+          correct: "She doesn't dance",
+        },
+        {
+          question:
+            "Rearrange the words to form a correct sentence: 'is / cat / the / black'",
+          options: [
+            "Is the cat black.",
+            "Black the cat is.",
+            "The cat is black.",
+            "Cat is black the.",
+          ],
+          correct: "The cat is black",
+        },
+        {
+          question: "Complete the sentence: 'The boy ___ a kite.'",
+          options: ["fly", "flies", "flying", "flew"],
+          correct: "flies",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "She can swim.",
+            "Swim she can.",
+            "Can swim she.",
+            "She swim can.",
+          ],
+          correct: "She can swim",
+        },
+        {
+          question: "Complete the sentence: 'The sun ___ in the east.'",
+          options: ["rise", "rises", "risen", "rising"],
+          correct: "rises",
+        },
+        {
+          question:
+            "Rearrange the words to form a correct sentence: 'dog / barking / is / the'",
+          options: [
+            "The dog is barking.",
+            "Barking the dog is.",
+            "Dog is barking the.",
+            "Is barking the dog.",
+          ],
+          correct: "The dog is barking",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "He are reading.",
+            "He is reading.",
+            "He reading is.",
+            "He read is.",
+          ],
+          correct: "He is reading",
+        },
+        {
+          question: "Complete the sentence: 'The flowers ___ in the garden.'",
+          options: ["bloom", "blooms", "blooming", "bloomed"],
+          correct: "blooms",
+        },
+        {
+          question:
+            "Rearrange the words to form a correct sentence: 'in / fish / the / water / swim'",
+          options: [
+            "Swim the fish in water.",
+            "The fish swim in water.",
+            "Fish swim in the water.",
+            "In water the fish swim.",
+          ],
+          correct: "The fish swim in water",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "She likes ice cream.",
+            "Likes she ice cream.",
+            "Cream ice likes she.",
+            "She ice cream likes.",
+          ],
+          correct: "She likes ice cream",
+        },
+        {
+          question: "Complete the sentence: 'The ___ is shining.'",
+          options: ["moon", "sun", "stars", "earth"],
+          correct: "sun",
+        },
+        {
+          question:
+            "Rearrange the words to form a correct sentence: 'are / birds / flying / the'",
+          options: [
+            "The birds are flying.",
+            "Birds the are flying.",
+            "The birds are flying.",
+            "Flying are the birds.",
+          ],
+          correct: "The birds are flying",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "They are friends.",
+            "Friends are they.",
+            "They friends are.",
+            "Friends they are.",
+          ],
+          correct: "They are friends",
+        },
+        {
+          question: "Complete the sentence: 'The dog ___ at the cat.'",
+          options: ["bark", "barks", "barking", "barked"],
+          correct: "barks",
+        },
+        {
+          question:
+            "Rearrange the words to form a correct sentence: 'on / sits / chair / the / cat'",
+          options: [
+            "The cat sits on chair.",
+            "Sits on chair the cat.",
+            "The cat sits on the chair.",
+            "Cat sits the on chair.",
+          ],
+          correct: "The cat sits on the chair",
+        },
+        {
+          question: "Choose the correct sentence:",
+          options: [
+            "She is dancing.",
+            "Is dancing she.",
+            "Dancing is she.",
+            "Dancing she is.",
+          ],
+          correct: "She is dancing",
+        },
+        {
+          question:
+            "Read the passage: 'Tom went to the park. He played on the swing. Then he saw a big dog.' Where did Tom go?",
+          options: ["School", "Park", "Beach", "Mall"],
+          correct: "Park",
+        },
+        {
+          question:
+            "Read the passage: 'The sun is bright and yellow. It gives us light and warmth.' What color is the sun?",
+          options: ["Blue", "Green", "Yellow", "Red"],
+          correct: "Yellow",
+        },
+        {
+          question:
+            "Read the passage: 'Sarah has a red ball. She likes to play with it every day.' What color is Sarah's ball?",
+          options: ["Blue", "Green", "Red", "Yellow"],
+          correct: "Red",
+        },
+        {
+          question:
+            "Read the passage: 'The cat is sitting on the mat. It is looking at the mouse.' Where is the cat sitting?",
+          options: [
+            "On the mat",
+            "In the tree",
+            "Under the table",
+            "On the chair",
+          ],
+          correct: "On the mat",
+        },
+        {
+          question:
+            "Read the passage: 'The bird is singing in the tree. It sings a sweet song.' What is the bird doing?",
+          options: ["Running", "Flying", "Singing", "Sleeping"],
+          correct: "Singing",
+        },
+        {
+          question:
+            "Read the passage: 'The cow gives us milk. It is a farm animal.' What does the cow give us?",
+          options: ["Water", "Milk", "Wool", "Eggs"],
+          correct: "Milk",
+        },
+        {
+          question:
+            "Read the passage: 'Jenny has a pet rabbit. It has long ears and a fluffy tail.' What kind of pet does Jenny have?",
+          options: ["Dog", "Cat", "Rabbit", "Bird"],
+          correct: "Rabbit",
+        },
+        {
+          question:
+            "Read the passage: 'The flowers are blooming in the garden. They are red, yellow, and blue.' What colors are the flowers?",
+          options: [
+            "Red, Green",
+            "Red, Yellow, Blue",
+            "Black, White",
+            "Blue, Purple",
+          ],
+          correct: "Red, Yellow, Blue",
+        },
+        {
+          question:
+            "Read the passage: 'The dog barked loudly at the stranger. Then it wagged its tail.' How did the dog react to the stranger?",
+          options: ["Cried", "Barked", "Ran", "Slept"],
+          correct: "Barked",
+        },
+        {
+          question:
+            "Read the passage: 'The moon shines at night. It is round and white.' When does the moon shine?",
+          options: ["Morning", "Evening", "Night", "Afternoon"],
+          correct: "Night",
+        },
+        {
+          question:
+            "Read the passage: 'The kids are playing in the playground. They are having fun.' Where are the kids playing?",
+          options: ["Park", "Playground", "Garden", "Pool"],
+          correct: "Playground",
+        },
+        {
+          question:
+            "Read the passage: 'Anna likes to read books. Her favorite book is about animals.' What is Anna's favorite book about?",
+          options: ["Cars", "Animals", "Plants", "Stars"],
+          correct: "Animals",
+        },
+        {
+          question:
+            "Read the passage: 'The cake is on the table. It is chocolate flavored.' What flavor is the cake?",
+          options: ["Vanilla", "Strawberry", "Chocolate", "Banana"],
+          correct: "Chocolate",
+        },
+        {
+          question:
+            "Read the passage: 'The stars twinkle in the sky at night. They look like diamonds.' When do the stars twinkle?",
+          options: ["Morning", "Evening", "Night", "Afternoon"],
+          correct: "Night",
+        },
+        {
+          question:
+            "Read the passage: 'The duck is swimming in the pond. It quacks happily.' What is the duck doing?",
+          options: ["Flying", "Eating", "Swimming", "Sleeping"],
+          correct: "Swimming",
+        },
+      ];
+
+      let currentQuestion = 0;
+      let score = 0;
+
+      function displayQuestion() {
+        if (currentQuestion >= questions.length) {
+          // Display the final result
+          document.getElementById("question-container").innerHTML = `
+                    <h2>Test Completed!</h2>
+                    <p>Your total points: ${score} / ${questions.length}</p>
+                `;
+          document.getElementById("next-btn").style.display = "none";
+          return;
+        }
+
+        let questionContainer = document.getElementById("question-container");
+        let question = questions[currentQuestion];
+        let optionsHtml = "";
+
+        question.options.forEach((option) => {
+          optionsHtml += `<button class="option" onclick="checkAnswer('${option}')">${option}</button>`;
+        });
+
+        questionContainer.innerHTML = `
+                <div class="question">${question.question}</div>
+                <div class="options">${optionsHtml}</div>
+            `;
+      }
+
+      function checkAnswer(selectedOption) {
+        let question = questions[currentQuestion];
+        let resultContainer = document.getElementById("result");
+        let scoreContainer = document.getElementById("score");
+
+        if (selectedOption === question.correct) {
+          score++;
+          resultContainer.innerHTML = "Correct!";
+        } else {
+          resultContainer.innerHTML = `Wrong! The correct answer is: ${question.correct}`;
+        }
+
+        // Update and display the score
+        scoreContainer.innerHTML = `Points: ${score}`;
+
+        // Disable options after one is selected
+        document.querySelectorAll(".option").forEach((button) => {
+          button.disabled = true;
+        });
+      }
+
+      function nextQuestion() {
+        currentQuestion++;
+        document.getElementById("result").innerHTML = "";
+        displayQuestion();
+      }
+
+      // Initialize quiz
+      displayQuestion();
+    </script>
+  </body>
+</html>
