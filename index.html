@@ -138,20 +138,20 @@
         border: none;
         border-radius: 50px;
         cursor: pointer;
-        margin-top: 30px;
+        margin: 10%;
         font-size: 1.2em;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         transition: background-color 0.3s, transform 0.3s;
         position: fixed; /* Fix to bottom */
         bottom: 20px; /* Position 20px from bottom */
-        left: 50%; /* Center
-    horizontally */
-        transform: translateX(-50%); /* Adjust position to center */
+        left: 20px; /* Move it 20px from the left */
+        transform: translateX(0); /* No centering needed */
         z-index: 10; /* Ensure it appears above other elements */
       }
+
       #next-btn:hover {
         background-color: #228b22;
-        transform: translateY(-5px) translateX(-50%);
+        transform: translateY(-5px); /* Adjust hover movement */
       }
     </style>
   </head>
