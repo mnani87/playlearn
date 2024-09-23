@@ -6,194 +6,196 @@
     <title>English Mock Test for Kids</title>
 
     <style>
-            body {
-              font-family: "Comic Sans
-          MS", cursive, sans-serif;
-              background: linear-gradient(to right, #ffefba, #ffffff);
-              text-align: center;
-              margin: 0;
-              padding: 20px;
-              min-height: 100vh;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              overflow: hidden; /* Hide overflow for fireworks */
-            }
-            h1 {
-              color: #ff6347;
-              font-size: 3em;
-              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            .question-container {
-              margin: 20px auto;
-              padding: 20px;
-              background: #fff7e6;
-              border-radius: 15px;
-              width: 90%;
-              max-width: 600px;
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-              transition: transform 0.3s ease;
-              position: relative; /*
-          For fireworks effect */
-            }
-            .question-container:hover {
-              transform: scale(1.05);
-            }
-            .question {
-              font-size: 1.8em;
-              color: #ff7f50;
-              margin-bottom: 20px;
-            }
-            .options {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: 15px;
-              margin-top: 20px;
-            }
-            .option {
-              background-color: #ffeb3b;
-              padding: 12px 25px;
-              border: none;
-              border-radius: 50px;
-              cursor: pointer;
-              width: 80%;
-              max-width: 400px;
-              font-size: 1.2em;
-              color: #333;
-              box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-              transition: background-color 0.3s, transform 0.3s;
-            }
-            .option:hover {
-              background-color: #ffc107;
-              transform: translateY(-5px);
-            } /* Animation for correct answer */
-            .correct-answer {
-              animation: flashCorrect 1s ease forwards;
-            }
-            @keyframes flashCorrect {
-              0% {
-                background-color: #32cd32;
-                transform: scale(1);
-              }
-              50% {
-                background-color: #7cfc00;
-                transform: scale(1.2);
-              }
-              100% {
-                background-color: #32cd32;
-                transform: scale(1);
-              }
-            } /* Fireworks container */
-            .fireworks {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100vw;
-              height: 100vh;
-              pointer-events: none;
-              overflow: hidden;
-              z-index: 1; /* Place behind quiz content */
-            }
-            .firework {
-              position: absolute;
-              bottom: 0;
-              width: 5px;
-              height: 5px;
-              background: transparent;
-              border-radius: 50%;
-              opacity: 0;
-              animation: firework 1.4s ease-out forwards;
-            } /* Firework animation */
-            @keyframes firework {
-              0% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-              }
-              50% {
-                opacity: 1;
-                transform: scale(1.5) translateY(-200px);
-              }
-              100% {
-                opacity: 0;
-                transform: scale(0) translateY(-300px);
-              }
-            } /* Styling for feedback text */
-            #result {
-              font-size: 1.5em;
-              margin-top: 20px;
-              min-height: 30px; /* Ensure space is
-          maintained */
-            }
-            #score {
-              font-size: 1.5em;
-              color: #ff6347;
-              margin-top: 20px;
-            }
-            #next-btn {
-              background-color: #32cd32;
-              color: white;
-              padding: 12px 25px;
-              border: none;
-              border-radius: 50px;
-              cursor: pointer;
-              margin: 10%;
-              font-size: 1.2em;
-              box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-              transition: background-color 0.3s, transform 0.3s;
-              position: fixed; /* Fix to bottom */
-              bottom: 20px; /* Position 20px from bottom */
-              left: 20px; /* Move it 20px from the left */
-              transform: translateX(0); /* No centering needed */
-              z-index: 10; /* Ensure it appears above other elements */
-            }
+      body {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        background: linear-gradient(to right, #ffefba, #ffffff);
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Hide overflow for fireworks */
+      }
+      h1 {
+        color: #ff6347;
+        font-size: 3em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .question-container {
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff7e6;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        position: relative; /* For fireworks effect */
+      }
+      .question-container:hover {
+        transform: scale(1.05);
+      }
+      .question {
+        font-size: 1.8em;
+        color: #ff7f50;
+        margin-bottom: 20px;
+      }
+      .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .option {
+        background-color: #ffeb3b;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        width: 80%;
+        max-width: 400px;
+        font-size: 1.2em;
+        color: #333;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .option:hover {
+        background-color: #ffc107;
+        transform: translateY(-5px);
+      }
+      /* Animation for correct answer */
+      .correct-answer {
+        animation: flashCorrect 1s ease forwards;
+      }
+      @keyframes flashCorrect {
+        0% {
+          background-color: #32cd32;
+          transform: scale(1);
+        }
+        50% {
+          background-color: #7cfc00;
+          transform: scale(1.2);
+        }
+        100% {
+          background-color: #32cd32;
+          transform: scale(1);
+        }
+      }
+      /* Fireworks container */
+      .fireworks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1000; /* Place above quiz content */
+      }
+      .firework {
+        position: absolute;
+        bottom: 0;
+        width: 5px;
+        height: 5px;
+        background: transparent;
+        border-radius: 50%;
+        opacity: 0;
+        animation: firework 1.4s ease-out forwards;
+      }
+      /* Firework animation */
+      @keyframes firework {
+        0% {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.5) translateY(-200px);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0) translateY(-300px);
+        }
+      }
+      /* Styling for feedback text */
+      #result {
+        font-size: 1.5em;
+        margin-top: 20px;
+        min-height: 30px; /* Ensure space is maintained */
+      }
+      #score {
+        font-size: 1.5em;
+        color: #ff6347;
+        margin-top: 20px;
+      }
+      #next-btn {
+        background-color: #32cd32;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        margin: 10%;
+        font-size: 1.2em;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.3s;
+        position: fixed; /* Fix to bottom */
+        bottom: 20px; /* Position 20px from bottom */
+        left: 20px; /* Move it 20px from the left */
+        transform: translateX(0); /* No centering needed */
+        z-index: 10; /* Ensure it appears above other elements */
+      }
 
-            #next-btn:hover {
-              background-color: #228b22;
-              transform: translateY(-5px); /* Adjust hover movement */
-            }
+      #next-btn:hover {
+        background-color: #228b22;
+        transform: translateY(-5px); /* Adjust hover movement */
+      }
 
-            /* Media Queries for Smaller Screens */
+      /* Media Queries for Smaller Screens */
       @media (max-width: 768px) {
-          h1 {
-              font-size: 2.5em;
-          }
+        h1 {
+          font-size: 2.5em;
+        }
 
-          .question {
-              font-size: 1.5em;
-          }
+        .question {
+          font-size: 1.5em;
+        }
 
-          .option {
-              padding: 10px 20px;
-              font-size: 1.1em;
-          }
+        .option {
+          padding: 10px 20px;
+          font-size: 1.1em;
+        }
 
-          #next-btn {
-              padding: 10px 20px;
-              font-size: 1em;
-          }
+        #next-btn {
+          padding: 10px 20px;
+          font-size: 1em;
+        }
       }
 
       @media (max-width: 480px) {
-          h1 {
-              font-size: 2em;
-          }
+        h1 {
+          font-size: 2em;
+        }
 
-          .question {
-              font-size: 1.2em;
-          }
+        .question {
+          font-size: 1.2em;
+        }
 
-          .option {
-              padding: 8px 15px;
-              font-size: 1em;
-          }
+        .option {
+          padding: 8px 15px;
+          font-size: 1em;
+        }
 
-          #next-btn {
-              padding: 8px 15px;
-              font-size: 0.9em;
-              bottom: 10px; /* Move closer to the bottom on very small screens */
-          }
+        #next-btn {
+          padding: 8px 15px;
+          font-size: 0.9em;
+          bottom: 10px; /* Move closer to the bottom on very small screens */
+        }
+      }
     </style>
   </head>
   <body>
@@ -209,293 +211,290 @@
     <script>
       // JavaScript for quiz logic
       let questions = [
-        // 100 Questions
-        [
-          // English Questions
-          {
-            question: "Which word means the same as 'happy'?",
-            options: ["Sad", "Joyful", "Angry", "Tired"],
-            correct: "Joyful",
-          },
-          {
-            question: "What is the opposite of 'big'?",
-            options: ["Small", "Tall", "Wide", "Long"],
-            correct: "Small",
-          },
-          {
-            question:
-              "Choose the noun in the sentence: 'The cat sleeps on the mat.'",
-            options: ["sleeps", "on", "cat", "the"],
-            correct: "cat",
-          },
-          {
-            question: "Which word is a verb?",
-            options: ["Run", "Blue", "Quick", "Tree"],
-            correct: "Run",
-          },
-          {
-            question: "What is the plural of 'mouse'?",
-            options: ["dogs", "mice", "mouses", "moose"],
-            correct: "mice",
-          },
-          {
-            question: "Which word completes the sentence: 'She ___ a book.'",
-            options: ["reads", "red", "reed", "ready"],
-            correct: "reads",
-          },
-          {
-            question: "Which word is an adjective?",
-            options: ["Quickly", "Blue", "Run", "Happiness"],
-            correct: "Blue",
-          },
-          {
-            question: "Choose the correct spelling:",
-            options: ["Thier", "Their", "There", "Thear"],
-            correct: "Their",
-          },
-          {
-            question: "What is the past tense of 'jump'?",
-            options: ["Jumped", "Jumps", "Jumping", "Jumper"],
-            correct: "Jumped",
-          },
-          {
-            question: "Which word rhymes with 'cat'?",
-            options: ["Dog", "Hat", "Sun", "Tree"],
-            correct: "Hat",
-          },
-          {
-            question: "Choose the correct contraction for 'do not':",
-            options: ["don't", "doesn't", "didn't", "can't"],
-            correct: "don't",
-          },
-          {
-            question: "Which sentence is correct?",
-            options: [
-              "She go to school.",
-              "She goes to school.",
-              "She going to school.",
-              "She gone to school.",
-            ],
-            correct: "She goes to school.",
-          },
-          {
-            question: "What is the synonym of 'quick'?",
-            options: ["Fast", "Slow", "Heavy", "Bright"],
-            correct: "Fast",
-          },
-          {
-            question: "Which word is a preposition?",
-            options: ["Under", "Happy", "Run", "Blue"],
-            correct: "Under",
-          },
-          {
-            question: "Choose the correct form: 'They ___ playing.'",
-            options: ["is", "are", "was", "be"],
-            correct: "are",
-          },
-          {
-            question: "What is the antonym of 'hot'?",
-            options: ["Warm", "Cold", "Loud", "Bright"],
-            correct: "Cold",
-          },
-          {
-            question: "Which word starts with a vowel?",
-            options: ["Cat", "Elephant", "Dog", "Fish"],
-            correct: "Elephant",
-          },
+        // English Questions
+        {
+          question: "Which word means the same as 'happy'?",
+          options: ["Sad", "Joyful", "Angry", "Tired"],
+          correct: "Joyful",
+        },
+        {
+          question: "What is the opposite of 'big'?",
+          options: ["Small", "Tall", "Wide", "Long"],
+          correct: "Small",
+        },
+        {
+          question:
+            "Choose the noun in the sentence: 'The cat sleeps on the mat.'",
+          options: ["sleeps", "on", "cat", "the"],
+          correct: "cat",
+        },
+        {
+          question: "Which word is a verb?",
+          options: ["Run", "Blue", "Quick", "Tree"],
+          correct: "Run",
+        },
+        {
+          question: "What is the plural of 'mouse'?",
+          options: ["dogs", "mice", "mouses", "moose"],
+          correct: "mice",
+        },
+        {
+          question: "Which word completes the sentence: 'She ___ a book.'",
+          options: ["reads", "red", "reed", "ready"],
+          correct: "reads",
+        },
+        {
+          question: "Which word is an adjective?",
+          options: ["Quickly", "Blue", "Run", "Happiness"],
+          correct: "Blue",
+        },
+        {
+          question: "Choose the correct spelling:",
+          options: ["Thier", "Their", "There", "Thear"],
+          correct: "Their",
+        },
+        {
+          question: "What is the past tense of 'jump'?",
+          options: ["Jumped", "Jumps", "Jumping", "Jumper"],
+          correct: "Jumped",
+        },
+        {
+          question: "Which word rhymes with 'cat'?",
+          options: ["Dog", "Hat", "Sun", "Tree"],
+          correct: "Hat",
+        },
+        {
+          question: "Choose the correct contraction for 'do not':",
+          options: ["don't", "doesn't", "didn't", "can't"],
+          correct: "don't",
+        },
+        {
+          question: "Which sentence is correct?",
+          options: [
+            "She go to school.",
+            "She goes to school.",
+            "She going to school.",
+            "She gone to school.",
+          ],
+          correct: "She goes to school.",
+        },
+        {
+          question: "What is the synonym of 'quick'?",
+          options: ["Fast", "Slow", "Heavy", "Bright"],
+          correct: "Fast",
+        },
+        {
+          question: "Which word is a preposition?",
+          options: ["Under", "Happy", "Run", "Blue"],
+          correct: "Under",
+        },
+        {
+          question: "Choose the correct form: 'They ___ playing.'",
+          options: ["is", "are", "was", "be"],
+          correct: "are",
+        },
+        {
+          question: "What is the antonym of 'hot'?",
+          options: ["Warm", "Cold", "Loud", "Bright"],
+          correct: "Cold",
+        },
+        {
+          question: "Which word starts with a vowel?",
+          options: ["Cat", "Elephant", "Dog", "Fish"],
+          correct: "Elephant",
+        },
 
-          // Maths Questions
-          {
-            question: "What is 5 + 3?",
-            options: ["6", "7", "8", "9"],
-            correct: "8",
-          },
-          {
-            question: "What is 10 - 4?",
-            options: ["5", "6", "7", "8"],
-            correct: "6",
-          },
-          {
-            question: "What comes after 12?",
-            options: ["13", "11", "14", "10"],
-            correct: "13",
-          },
-          {
-            question: "What is 2 x 3?",
-            options: ["5", "6", "7", "8"],
-            correct: "6",
-          },
-          {
-            question: "What is half of 10?",
-            options: ["3", "4", "5", "6"],
-            correct: "5",
-          },
-          {
-            question: "What is the number before 20?",
-            options: ["19", "18", "21", "17"],
-            correct: "19",
-          },
-          {
-            question: "What is 9 divided by 3?",
-            options: ["1", "2", "3", "4"],
-            correct: "3",
-          },
-          {
-            question: "How many sides does a triangle have?",
-            options: ["2", "3", "4", "5"],
-            correct: "3",
-          },
-          {
-            question: "What is 7 + 2?",
-            options: ["8", "9", "10", "11"],
-            correct: "9",
-          },
-          {
-            question: "What is 15 - 5?",
-            options: ["9", "10", "11", "12"],
-            correct: "10",
-          },
-          {
-            question: "What comes before 7?",
-            options: ["5", "6", "8", "9"],
-            correct: "6",
-          },
-          {
-            question: "What is 4 x 2?",
-            options: ["6", "7", "8", "9"],
-            correct: "8",
-          },
-          {
-            question: "What is the next number in the sequence: 2, 4, 6, ___?",
-            options: ["7", "8", "9", "10"],
-            correct: "8",
-          },
-          {
-            question: "How many minutes are in one hour?",
-            options: ["30", "45", "60", "90"],
-            correct: "60",
-          },
-          {
-            question: "What is 12 divided by 4?",
-            options: ["2", "3", "4", "5"],
-            correct: "3",
-          },
-          {
-            question: "What is 3 + 3 + 3?",
-            options: ["6", "7", "8", "9"],
-            correct: "9",
-          },
-          {
-            question: "What number is missing: 5, __, 15?",
-            options: ["10", "12", "14", "16"],
-            correct: "10",
-          },
+        // Maths Questions
+        {
+          question: "What is 5 + 3?",
+          options: ["6", "7", "8", "9"],
+          correct: "8",
+        },
+        {
+          question: "What is 10 - 4?",
+          options: ["5", "6", "7", "8"],
+          correct: "6",
+        },
+        {
+          question: "What comes after 12?",
+          options: ["13", "11", "14", "10"],
+          correct: "13",
+        },
+        {
+          question: "What is 2 x 3?",
+          options: ["5", "6", "7", "8"],
+          correct: "6",
+        },
+        {
+          question: "What is half of 10?",
+          options: ["3", "4", "5", "6"],
+          correct: "5",
+        },
+        {
+          question: "What is the number before 20?",
+          options: ["19", "18", "21", "17"],
+          correct: "19",
+        },
+        {
+          question: "What is 9 divided by 3?",
+          options: ["1", "2", "3", "4"],
+          correct: "3",
+        },
+        {
+          question: "How many sides does a triangle have?",
+          options: ["2", "3", "4", "5"],
+          correct: "3",
+        },
+        {
+          question: "What is 7 + 2?",
+          options: ["8", "9", "10", "11"],
+          correct: "9",
+        },
+        {
+          question: "What is 15 - 5?",
+          options: ["9", "10", "11", "12"],
+          correct: "10",
+        },
+        {
+          question: "What comes before 7?",
+          options: ["5", "6", "8", "9"],
+          correct: "6",
+        },
+        {
+          question: "What is 4 x 2?",
+          options: ["6", "7", "8", "9"],
+          correct: "8",
+        },
+        {
+          question: "What is the next number in the sequence: 2, 4, 6, ___?",
+          options: ["7", "8", "9", "10"],
+          correct: "8",
+        },
+        {
+          question: "How many minutes are in one hour?",
+          options: ["30", "45", "60", "90"],
+          correct: "60",
+        },
+        {
+          question: "What is 12 divided by 4?",
+          options: ["2", "3", "4", "5"],
+          correct: "3",
+        },
+        {
+          question: "What is 3 + 3 + 3?",
+          options: ["6", "7", "8", "9"],
+          correct: "9",
+        },
+        {
+          question: "What number is missing: 5, __, 15?",
+          options: ["10", "12", "14", "16"],
+          correct: "10",
+        },
 
-          // Logic Questions
-          {
-            question:
-              "If you have two apples and you eat one, how many apples are left?",
-            options: ["0", "1", "2", "3"],
-            correct: "1",
-          },
-          {
-            question: "What comes next: Monday, Tuesday, Wednesday, ___?",
-            options: ["Friday", "Thursday", "Sunday", "Saturday"],
-            correct: "Thursday",
-          },
-          {
-            question: "Which shape has four equal sides?",
-            options: ["Rectangle", "Triangle", "Square", "Circle"],
-            correct: "Square",
-          },
-          {
-            question: "What is the opposite of 'up'?",
-            options: ["Down", "Left", "Right", "Forward"],
-            correct: "Down",
-          },
-          {
-            question: "If today is Monday, what day was yesterday?",
-            options: ["Sunday", "Tuesday", "Wednesday", "Thursday"],
-            correct: "Sunday",
-          },
-          {
-            question: "Which animal is known as the king of the jungle?",
-            options: ["Elephant", "Tiger", "Lion", "Giraffe"],
-            correct: "Lion",
-          },
-          {
-            question: "What do bees make?",
-            options: ["Milk", "Honey", "Silk", "Wax"],
-            correct: "Honey",
-          },
-          {
-            question:
-              "If you have a red house and a blue car, what color is the house?",
-            options: ["Blue", "Red", "Green", "Yellow"],
-            correct: "Red",
-          },
-          {
-            question: "Which season comes after spring?",
-            options: ["Summer", "Winter", "Autumn", "Fall"],
-            correct: "Summer",
-          },
-          {
-            question: "What is the first letter of the word 'Apple'?",
-            options: ["A", "B", "C", "D"],
-            correct: "A",
-          },
-          {
-            question: "How many legs does a spider have?",
-            options: ["6", "8", "10", "12"],
-            correct: "8",
-          },
-          {
-            question: "Which one is a fruit?",
-            options: ["Carrot", "Apple", "Potato", "Spinach"],
-            correct: "Apple",
-          },
-          {
-            question: "What do you use to write on a blackboard?",
-            options: ["Crayon", "Marker", "Chalk", "Paint"],
-            correct: "Chalk",
-          },
-          {
-            question: "Which is bigger: an elephant or a mouse?",
-            options: ["Elephant", "Mouse", "They are the same", "Depends"],
-            correct: "Elephant",
-          },
-          {
-            question: "What color do you get when you mix red and white?",
-            options: ["Pink", "Purple", "Orange", "Green"],
-            correct: "Pink",
-          },
-          {
-            question:
-              "If you have 3 red balloons and 2 blue balloons, how many balloons do you have in total?",
-            options: ["4", "5", "6", "7"],
-            correct: "5",
-          },
-          {
-            question: "What is the opposite of 'night'?",
-            options: ["Day", "Morning", "Afternoon", "Evening"],
-            correct: "Day",
-          },
-          {
-            question: "Which tool do you use to cut paper?",
-            options: ["Hammer", "Screwdriver", "Scissors", "Wrench"],
-            correct: "Scissors",
-          },
-          {
-            question: "What do you wear on your feet?",
-            options: ["Hat", "Shirt", "Socks", "Gloves"],
-            correct: "Socks",
-          },
-          {
-            question: "Which is a mode of transportation?",
-            options: ["Bicycle", "Tree", "Book", "Chair"],
-            correct: "Bicycle",
-          },
-        ],
+        // Logic Questions
+        {
+          question:
+            "If you have two apples and you eat one, how many apples are left?",
+          options: ["0", "1", "2", "3"],
+          correct: "1",
+        },
+        {
+          question: "What comes next: Monday, Tuesday, Wednesday, ___?",
+          options: ["Friday", "Thursday", "Sunday", "Saturday"],
+          correct: "Thursday",
+        },
+        {
+          question: "Which shape has four equal sides?",
+          options: ["Rectangle", "Triangle", "Square", "Circle"],
+          correct: "Square",
+        },
+        {
+          question: "What is the opposite of 'up'?",
+          options: ["Down", "Left", "Right", "Forward"],
+          correct: "Down",
+        },
+        {
+          question: "If today is Monday, what day was yesterday?",
+          options: ["Sunday", "Tuesday", "Wednesday", "Thursday"],
+          correct: "Sunday",
+        },
+        {
+          question: "Which animal is known as the king of the jungle?",
+          options: ["Elephant", "Tiger", "Lion", "Giraffe"],
+          correct: "Lion",
+        },
+        {
+          question: "What do bees make?",
+          options: ["Milk", "Honey", "Silk", "Wax"],
+          correct: "Honey",
+        },
+        {
+          question:
+            "If you have a red house and a blue car, what color is the house?",
+          options: ["Blue", "Red", "Green", "Yellow"],
+          correct: "Red",
+        },
+        {
+          question: "Which season comes after spring?",
+          options: ["Summer", "Winter", "Autumn", "Fall"],
+          correct: "Summer",
+        },
+        {
+          question: "What is the first letter of the word 'Apple'?",
+          options: ["A", "B", "C", "D"],
+          correct: "A",
+        },
+        {
+          question: "How many legs does a spider have?",
+          options: ["6", "8", "10", "12"],
+          correct: "8",
+        },
+        {
+          question: "Which one is a fruit?",
+          options: ["Carrot", "Apple", "Potato", "Spinach"],
+          correct: "Apple",
+        },
+        {
+          question: "What do you use to write on a blackboard?",
+          options: ["Crayon", "Marker", "Chalk", "Paint"],
+          correct: "Chalk",
+        },
+        {
+          question: "Which is bigger: an elephant or a mouse?",
+          options: ["Elephant", "Mouse", "They are the same", "Depends"],
+          correct: "Elephant",
+        },
+        {
+          question: "What color do you get when you mix red and white?",
+          options: ["Pink", "Purple", "Orange", "Green"],
+          correct: "Pink",
+        },
+        {
+          question:
+            "If you have 3 red balloons and 2 blue balloons, how many balloons do you have in total?",
+          options: ["4", "5", "6", "7"],
+          correct: "5",
+        },
+        {
+          question: "What is the opposite of 'night'?",
+          options: ["Day", "Morning", "Afternoon", "Evening"],
+          correct: "Day",
+        },
+        {
+          question: "Which tool do you use to cut paper?",
+          options: ["Hammer", "Screwdriver", "Scissors", "Wrench"],
+          correct: "Scissors",
+        },
+        {
+          question: "What do you wear on your feet?",
+          options: ["Hat", "Shirt", "Socks", "Gloves"],
+          correct: "Socks",
+        },
+        {
+          question: "Which is a mode of transportation?",
+          options: ["Bicycle", "Tree", "Book", "Chair"],
+          correct: "Bicycle",
+        },
       ];
 
       let currentQuestion = 0;
@@ -505,9 +504,9 @@
         if (currentQuestion >= questions.length) {
           // Display the final result
           document.getElementById("question-container").innerHTML = `
-                    <h2>Test Completed!</h2>
-                    <p>Your total points: ${score} / ${questions.length}</p>
-                `;
+                <h2>Test Completed!</h2>
+                <p>Your total points: ${score} / ${questions.length}</p>
+            `;
           document.getElementById("next-btn").style.display = "none";
           return;
         }
@@ -517,7 +516,7 @@
         let optionsHtml = "";
 
         question.options.forEach((option) => {
-          optionsHtml += `<button class="option" onclick="checkAnswer('${option}')">${option}</button>`;
+          optionsHtml += `<button class="option" onclick="checkAnswer(event, '${option}')">${option}</button>`;
         });
 
         questionContainer.innerHTML = `
@@ -557,7 +556,7 @@
         }, 2000);
       }
 
-      function checkAnswer(selectedOption) {
+      function checkAnswer(event, selectedOption) {
         let question = questions[currentQuestion];
         let resultContainer = document.getElementById("result");
         let scoreContainer = document.getElementById("score");
@@ -578,7 +577,7 @@
         // Update and display the score
         scoreContainer.innerHTML = `Points: ${score}`;
 
-        // Disable options after one is selected
+        // Disable all option buttons after selection
         document.querySelectorAll(".option").forEach((button) => {
           button.disabled = true;
         });
