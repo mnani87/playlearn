@@ -210,521 +210,292 @@
       // JavaScript for quiz logic
       let questions = [
         // 100 Questions
-        {
-          question: "Which word means the same as 'empty'?",
-          options: ["Bare", "Heavy", "Sore", "Lazy"],
-          correct: "Bare",
-        },
-        {
-          question: "Which word is an antonym of 'shallow'",
-          options: ["Narrow", "Deep", "Small", "Hard"],
-          correct: "Deep",
-        },
-        {
-          question: "Which word is a synonym for 'brave'?",
-          options: ["Calm", "Shy", "Adventurous", "Pretty"],
-          correct: "Adventurous",
-        },
-        {
-          question: "What is the antonym of 'bored'?",
-          options: ["Excited", "Cheated", "Brave", "Awake"],
-          correct: "Excited",
-        },
-        {
-          question: "What is the past tense of the verb 'run'?",
-          options: ["Runned", "Runner", "Ran", "Ranned"],
-          correct: "Ran",
-        },
-        {
-          question: "Choose the correct spelling",
-          options: ["Butiful", "Beautyful", "Beautiful", "Beutiful"],
-          correct: "Beautiful",
-        },
-        {
-          question: "What is the antonym of 'talkative'?",
-          options: ["Heavy", "Noisy", "Soft", "Silent"],
-          correct: "Silent",
-        },
-        {
-          question: "Which word is the opposite of 'dark'?",
-          options: ["Light", "Black", "Bright", "Shadow"],
-          correct: "Light",
-        },
-        {
-          question:
-            "If you have 4 boxes and each box contains 6 apples, how many apples do you have in total?",
-          options: ["32", "18", "24", "26"],
-          correct: "24",
-        },
-        {
-          question: "Which word means the opposite of 'old'?",
-          options: ["New", "Young", "Aged", "Modern"],
-          correct: "New",
-        },
-        {
-          question: "What planet is known as the 'Red Planet'?",
-          options: ["Earth", "Mars", "Jupiter", "Sun"],
-          correct: "Mars",
-        },
-        {
-          question: "Which word is the opposite of 'clean'?",
-          options: ["Dirty", "Neat", "Tidy", "Wash"],
-          correct: "Dirty",
-        },
-        {
-          question: "What is the opposite of 'up'?",
-          options: ["Down", "Over", "High", "Low"],
-          correct: "Down",
-        },
-        {
-          question: "Which word means the opposite of 'inside'?",
-          options: ["Within", "Outside", "Around", "Beside"],
-          correct: "Outside",
-        },
-        {
-          question: "What is the opposite of 'full'?",
-          options: ["Empty", "Whole", "Large", "Big"],
-          correct: "Empty",
-        },
-        {
-          question: "Which word means the opposite of 'above'?",
-          options: ["Below", "Over", "Next", "Top"],
-          correct: "Below",
-        },
-        {
-          question: "What is the antonym of 'soft'?",
-          options: ["Hard", "Gentle", "Smooth", "Quiet"],
-          correct: "Hard",
-        },
-        {
-          question: "How many legs do 3 ducks and 2 cats have in total",
-          options: ["10", "14", "16", "20"],
-          correct: "14",
-        },
-        {
-          question: "What is the opposite of 'open'?",
-          options: ["Close", "Shut", "Lock", "Enter"],
-          correct: "Close",
-        },
-        {
-          question: "Which word means the opposite of 'give'?",
-          options: ["Take", "Offer", "Share", "Pass"],
-          correct: "Take",
-        },
-        {
-          question: "Choose the noun in the sentence: 'The cat is sleeping.'",
-          options: ["Sleeping", "Cat", "Is", "The"],
-          correct: "Cat",
-        },
-        {
-          question: "Identify the verb in the sentence: 'She runs fast.'",
-          options: ["She", "Runs", "Fast", "The"],
-          correct: "Runs",
-        },
-        {
-          question: "Which sentence is correct?",
-          options: [
-            "I is happy.",
-            "He are here.",
-            "They is dancing.",
-            "She is singing.",
-          ],
-          correct: "She is singing.",
-        },
-        {
-          question: "Fill in the blank: 'The sun ___ in the sky.'",
-          options: ["shine", "shines", "shined", "shining"],
-          correct: "shines",
-        },
-        {
-          question: "Choose the pronoun: 'He is my friend.'",
-          options: ["He", "Is", "Friend", "My"],
-          correct: "He",
-        },
-        {
-          question: "Which word is an adjective?",
-          options: ["Run", "Happy", "Quickly", "Yesterday"],
-          correct: "Happy",
-        },
-        {
-          question: "What is the plural of 'child'?",
-          options: ["Childs", "Childes", "Children", "Childrens"],
-          correct: "Children",
-        },
-        {
-          question:
-            "There are 25 birds sitting on a tree. If 13 birds fly away, how many birds are left on the tree",
-          options: ["12", "10", "38", "15"],
-          correct: "12",
-        },
-        {
-          question: "Which of these is a correct sentence?",
-          options: [
-            "I is tall.",
-            "He am here.",
-            "They are playing.",
-            "She are smart.",
-          ],
-          correct: "They are playing.",
-        },
-        {
-          question: "Fill in the blank: 'The birds are ___ in the sky.'",
-          options: ["fly", "flies", "flying", "flied"],
-          correct: "flying",
-        },
-        {
-          question: "What is the past tense of 'go'?",
-          options: ["Go", "Going", "Went", "Goes"],
-          correct: "Went",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "The dog are barking.",
-            "The dogs is barking.",
-            "The dog is barking.",
-            "The dogs are barked.",
-          ],
-          correct: "The dog is barking.",
-        },
-        {
-          question: "Fill in the blank: 'She ___ her homework.'",
-          options: ["do", "does", "doing", "done"],
-          correct: "does",
-        },
-        {
-          question: "Which word is an adverb?",
-          options: ["Run", "Quickly", "Tall", "Heavy"],
-          correct: "Quickly",
-        },
-        {
-          question: "Choose the correct plural form:",
-          options: ["Boxs", "Boxes", "Boxies", "Boxed"],
-          correct: "Boxes",
-        },
-        {
-          question: "Fill in the blank: 'He ___ a book.'",
-          options: ["read", "reads", "reading", "readed"],
-          correct: "reads",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "She don't like apples.",
-            "She doesn't likes apples.",
-            "She didn't likes apples.",
-            "She does like apples.",
-          ],
-          correct: "She does like apples.",
-        },
-        {
-          question: "Fill in the blank: 'The car is ___ than the bike.'",
-          options: ["fast", "faster", "fastest", "more fast"],
-          correct: "faster",
-        },
-        {
-          question: "What is the past tense of 'eat'?",
-          options: ["Eat", "Eated", "Ate", "Eats"],
-          correct: "Ate",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "They was playing.",
-            "They were playing.",
-            "They is playing.",
-            "They are played.",
-          ],
-          correct: "They were playing.",
-        },
-        {
-          question: "Fill in the blank: 'The baby is ___.'",
-          options: ["sleep", "sleeps", "sleeping", "sleeped"],
-          correct: "sleeping",
-        },
-        {
-          question: "What is the plural of 'mouse'?",
-          options: ["Mouses", "Mices", "Mice", "Mousees"],
-          correct: "Mice",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "The boy like apples.",
-            "The boy likes apples.",
-            "The boys like apple.",
-            "The boy liking apples.",
-          ],
-          correct: "The boy likes apples.",
-        },
-        {
-          question: "Fill in the blank: 'She is ___ the song.'",
-          options: ["sing", "sings", "singing", "singed"],
-          correct: "singing",
-        },
-        {
-          question: "What is the opposite of 'tall'?",
-          options: ["Short", "High", "Large", "Big"],
-          correct: "Short",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "We is friends.",
-            "We are friends.",
-            "We am friends.",
-            "We are friend.",
-          ],
-          correct: "We are friends.",
-        },
-        {
-          question: "Fill in the blank: 'The ___ is shining.'",
-          options: ["moon", "sun", "stars", "earth"],
-          correct: "sun",
-        },
-        {
-          question: "What is the past tense of 'see'?",
-          options: ["See", "Saw", "Seen", "Seeing"],
-          correct: "Saw",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "She don't dance.",
-            "She does'nt dance.",
-            "She didn't dances.",
-            "She dances.",
-          ],
-          correct: "She dances.",
-        },
-        {
-          question:
-            "Rearrange the words to form a correct sentence: 'is / cat / the / black'",
-          options: [
-            "Is the cat black.",
-            "Black the cat is.",
-            "The cat is black.",
-            "Cat is black the.",
-          ],
-          correct: "The cat is black.",
-        },
-        {
-          question: "Complete the sentence: 'The boy ___ a kite.'",
-          options: ["fly", "flies", "flying", "flew"],
-          correct: "flies",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "She can swim.",
-            "Swim she can.",
-            "Can swim she.",
-            "She swim can.",
-          ],
-          correct: "She can swim.",
-        },
-        {
-          question: "Complete the sentence: 'The sun ___ in the east.'",
-          options: ["rise", "rises", "risen", "rising"],
-          correct: "rises",
-        },
-        {
-          question:
-            "Rearrange the words to form a correct sentence: 'dog / barking / is / the'",
-          options: [
-            "The dog is barking.",
-            "Barking the dog is.",
-            "Dog is barking the.",
-            "Is barking the dog.",
-          ],
-          correct: "The dog is barking.",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "He are reading.",
-            "He is reading.",
-            "He reading is.",
-            "He read is.",
-          ],
-          correct: "He is reading.",
-        },
-        {
-          question: "Complete the sentence: 'The flowers ___ in the garden.'",
-          options: ["bloom", "blooms", "blooming", "bloomed"],
-          correct: "blooms",
-        },
-        {
-          question:
-            "Rearrange the words to form a correct sentence: 'in / fish / the / water / swim'",
-          options: [
-            "Swim the fish in water.",
-            "The fish swim in water.",
-            "Fish swim in the water.",
-            "In water the fish swim.",
-          ],
-          correct: "The fish swim in water.",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "She likes ice cream.",
-            "Likes she ice cream.",
-            "Cream ice likes she.",
-            "She ice cream likes.",
-          ],
-          correct: "She likes ice cream.",
-        },
-        {
-          question: "Complete the sentence: 'The ___ is shining.'",
-          options: ["moon", "sun", "stars", "earth"],
-          correct: "sun",
-        },
-        {
-          question:
-            "Rearrange the words to form a correct sentence: 'are / birds / flying / the'",
-          options: [
-            "The birds are flying.",
-            "Birds the are flying.",
-            "The birds are flying.",
-            "Flying are the birds.",
-          ],
-          correct: "The birds are flying.",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "They are friends.",
-            "Friends are they.",
-            "They friends are.",
-            "Friends they are.",
-          ],
-          correct: "They are friends.",
-        },
-        {
-          question: "Complete the sentence: 'The dog ___ at the cat.'",
-          options: ["bark", "barks", "barking", "barked"],
-          correct: "barks",
-        },
-        {
-          question:
-            "Rearrange the words to form a correct sentence: 'on / sits / chair / the / cat'",
-          options: [
-            "The cat sits on chair.",
-            "Sits on chair the cat.",
-            "The cat sits on the chair.",
-            "Cat sits the on chair.",
-          ],
-          correct: "The cat sits on the chair.",
-        },
-        {
-          question: "Choose the correct sentence:",
-          options: [
-            "She is dancing.",
-            "Is dancing she.",
-            "Dancing is she.",
-            "Dancing she is.",
-          ],
-          correct: "She is dancing.",
-        },
-        {
-          question:
-            "Read the passage: 'Tom went to the park. He played on the swing. Then he saw a big dog.' Where did Tom go?",
-          options: ["School", "Park", "Dog", "Mall"],
-          correct: "Park",
-        },
-        {
-          question:
-            "Read the passage: 'The sun is bright and yellow. It gives us light and warmth.' What color is the sun?",
-          options: ["Blue", "Bright", "Yellow", "Warm"],
-          correct: "Yellow",
-        },
-        {
-          question:
-            "Read the passage: 'Sarah has a red ball. She likes to play with it every day.' What color is Sarah's ball?",
-          options: ["Blue", "Unknown", "Red", "Yellow"],
-          correct: "Red",
-        },
-        {
-          question:
-            "Read the passage: 'The cat is sitting on the mat. It is looking at the mouse.' Where is the cat sitting?",
-          options: [
-            "On the mat",
-            "In the tree",
-            "Under the table",
-            "On the chair",
-          ],
-          correct: "On the mat",
-        },
-        {
-          question:
-            "Read the passage: 'The bird is singing in the tree. It sings a sweet song.' What is the bird doing?",
-          options: ["Running", "Flying", "Singing", "Sleeping"],
-          correct: "Singing",
-        },
-        {
-          question: "Which of the following is an odd one out?",
-          options: ["Dog", "Cat", "Cow", "Car"],
-          correct: "Car",
-        },
-        {
-          question: "What number comes next in this sequence: 1, 2, 4, 8, ___",
-          options: ["4", "16", "32", "16"],
-          correct: "16",
-        },
-        {
-          question:
-            "Read the passage: 'The flowers are blooming in the garden. They are red, yellow, and blue.' What colors are the flowers?",
-          options: [
-            "Red, Green",
-            "Red, Yellow, Blue",
-            "Black, White",
-            "Blue, Purple",
-          ],
-          correct: "Red, Yellow, Blue",
-        },
-        {
-          question:
-            "Read the passage: 'The dog barked loudly at the stranger. Then it wagged its tail.' How did the dog react to the stranger?",
-          options: ["Cried", "Barked", "Ran", "Slept"],
-          correct: "Barked",
-        },
-        {
-          question:
-            "Read the passage: 'The moon shines at night. It is round and white.' When does the moon shine?",
-          options: ["Morning", "Evening", "Night", "Afternoon"],
-          correct: "Night",
-        },
-        {
-          question:
-            "Read the passage: 'The kids are playing in the playground. They are having fun.' Where are the kids playing?",
-          options: ["Park", "Playground", "Garden", "Pool"],
-          correct: "Playground",
-        },
-        {
-          question:
-            "Read the passage: 'Anna likes to read books. Her favorite book is about animals.' What is Anna's favorite book about?",
-          options: ["Cars", "Animals", "Plants", "Stars"],
-          correct: "Animals",
-        },
-        {
-          question:
-            "Read the passage: 'The cake is on the table. It is chocolate flavored.' What flavor is the cake?",
-          options: ["Vanilla", "Strawberry", "Chocolate", "Banana"],
-          correct: "Chocolate",
-        },
-        {
-          question:
-            "Read the passage: 'The stars twinkle in the sky at night. They look like diamonds.' When do the stars twinkle?",
-          options: ["Morning", "Evening", "Night", "Afternoon"],
-          correct: "Night",
-        },
-        {
-          question:
-            "Read the passage: 'The duck is swimming in the pond. It quacks happily.' What is the duck doing?",
-          options: ["Flying", "Eating", "Swimming", "Sleeping"],
-          correct: "Swimming",
-        },
+        [
+          // English Questions
+          {
+            question: "Which word means the same as 'happy'?",
+            options: ["Sad", "Joyful", "Angry", "Tired"],
+            correct: "Joyful",
+          },
+          {
+            question: "What is the opposite of 'big'?",
+            options: ["Small", "Tall", "Wide", "Long"],
+            correct: "Small",
+          },
+          {
+            question:
+              "Choose the noun in the sentence: 'The cat sleeps on the mat.'",
+            options: ["sleeps", "on", "cat", "the"],
+            correct: "cat",
+          },
+          {
+            question: "Which word is a verb?",
+            options: ["Run", "Blue", "Quick", "Tree"],
+            correct: "Run",
+          },
+          {
+            question: "What is the plural of 'mouse'?",
+            options: ["dogs", "mice", "mouses", "moose"],
+            correct: "mice",
+          },
+          {
+            question: "Which word completes the sentence: 'She ___ a book.'",
+            options: ["reads", "red", "reed", "ready"],
+            correct: "reads",
+          },
+          {
+            question: "Which word is an adjective?",
+            options: ["Quickly", "Blue", "Run", "Happiness"],
+            correct: "Blue",
+          },
+          {
+            question: "Choose the correct spelling:",
+            options: ["Thier", "Their", "There", "Thear"],
+            correct: "Their",
+          },
+          {
+            question: "What is the past tense of 'jump'?",
+            options: ["Jumped", "Jumps", "Jumping", "Jumper"],
+            correct: "Jumped",
+          },
+          {
+            question: "Which word rhymes with 'cat'?",
+            options: ["Dog", "Hat", "Sun", "Tree"],
+            correct: "Hat",
+          },
+          {
+            question: "Choose the correct contraction for 'do not':",
+            options: ["don't", "doesn't", "didn't", "can't"],
+            correct: "don't",
+          },
+          {
+            question: "Which sentence is correct?",
+            options: [
+              "She go to school.",
+              "She goes to school.",
+              "She going to school.",
+              "She gone to school.",
+            ],
+            correct: "She goes to school.",
+          },
+          {
+            question: "What is the synonym of 'quick'?",
+            options: ["Fast", "Slow", "Heavy", "Bright"],
+            correct: "Fast",
+          },
+          {
+            question: "Which word is a preposition?",
+            options: ["Under", "Happy", "Run", "Blue"],
+            correct: "Under",
+          },
+          {
+            question: "Choose the correct form: 'They ___ playing.'",
+            options: ["is", "are", "was", "be"],
+            correct: "are",
+          },
+          {
+            question: "What is the antonym of 'hot'?",
+            options: ["Warm", "Cold", "Loud", "Bright"],
+            correct: "Cold",
+          },
+          {
+            question: "Which word starts with a vowel?",
+            options: ["Cat", "Elephant", "Dog", "Fish"],
+            correct: "Elephant",
+          },
+
+          // Maths Questions
+          {
+            question: "What is 5 + 3?",
+            options: ["6", "7", "8", "9"],
+            correct: "8",
+          },
+          {
+            question: "What is 10 - 4?",
+            options: ["5", "6", "7", "8"],
+            correct: "6",
+          },
+          {
+            question: "What comes after 12?",
+            options: ["13", "11", "14", "10"],
+            correct: "13",
+          },
+          {
+            question: "What is 2 x 3?",
+            options: ["5", "6", "7", "8"],
+            correct: "6",
+          },
+          {
+            question: "What is half of 10?",
+            options: ["3", "4", "5", "6"],
+            correct: "5",
+          },
+          {
+            question: "What is the number before 20?",
+            options: ["19", "18", "21", "17"],
+            correct: "19",
+          },
+          {
+            question: "What is 9 divided by 3?",
+            options: ["1", "2", "3", "4"],
+            correct: "3",
+          },
+          {
+            question: "How many sides does a triangle have?",
+            options: ["2", "3", "4", "5"],
+            correct: "3",
+          },
+          {
+            question: "What is 7 + 2?",
+            options: ["8", "9", "10", "11"],
+            correct: "9",
+          },
+          {
+            question: "What is 15 - 5?",
+            options: ["9", "10", "11", "12"],
+            correct: "10",
+          },
+          {
+            question: "What comes before 7?",
+            options: ["5", "6", "8", "9"],
+            correct: "6",
+          },
+          {
+            question: "What is 4 x 2?",
+            options: ["6", "7", "8", "9"],
+            correct: "8",
+          },
+          {
+            question: "What is the next number in the sequence: 2, 4, 6, ___?",
+            options: ["7", "8", "9", "10"],
+            correct: "8",
+          },
+          {
+            question: "How many minutes are in one hour?",
+            options: ["30", "45", "60", "90"],
+            correct: "60",
+          },
+          {
+            question: "What is 12 divided by 4?",
+            options: ["2", "3", "4", "5"],
+            correct: "3",
+          },
+          {
+            question: "What is 3 + 3 + 3?",
+            options: ["6", "7", "8", "9"],
+            correct: "9",
+          },
+          {
+            question: "What number is missing: 5, __, 15?",
+            options: ["10", "12", "14", "16"],
+            correct: "10",
+          },
+
+          // Logic Questions
+          {
+            question:
+              "If you have two apples and you eat one, how many apples are left?",
+            options: ["0", "1", "2", "3"],
+            correct: "1",
+          },
+          {
+            question: "What comes next: Monday, Tuesday, Wednesday, ___?",
+            options: ["Friday", "Thursday", "Sunday", "Saturday"],
+            correct: "Thursday",
+          },
+          {
+            question: "Which shape has four equal sides?",
+            options: ["Rectangle", "Triangle", "Square", "Circle"],
+            correct: "Square",
+          },
+          {
+            question: "What is the opposite of 'up'?",
+            options: ["Down", "Left", "Right", "Forward"],
+            correct: "Down",
+          },
+          {
+            question: "If today is Monday, what day was yesterday?",
+            options: ["Sunday", "Tuesday", "Wednesday", "Thursday"],
+            correct: "Sunday",
+          },
+          {
+            question: "Which animal is known as the king of the jungle?",
+            options: ["Elephant", "Tiger", "Lion", "Giraffe"],
+            correct: "Lion",
+          },
+          {
+            question: "What do bees make?",
+            options: ["Milk", "Honey", "Silk", "Wax"],
+            correct: "Honey",
+          },
+          {
+            question:
+              "If you have a red house and a blue car, what color is the house?",
+            options: ["Blue", "Red", "Green", "Yellow"],
+            correct: "Red",
+          },
+          {
+            question: "Which season comes after spring?",
+            options: ["Summer", "Winter", "Autumn", "Fall"],
+            correct: "Summer",
+          },
+          {
+            question: "What is the first letter of the word 'Apple'?",
+            options: ["A", "B", "C", "D"],
+            correct: "A",
+          },
+          {
+            question: "How many legs does a spider have?",
+            options: ["6", "8", "10", "12"],
+            correct: "8",
+          },
+          {
+            question: "Which one is a fruit?",
+            options: ["Carrot", "Apple", "Potato", "Spinach"],
+            correct: "Apple",
+          },
+          {
+            question: "What do you use to write on a blackboard?",
+            options: ["Crayon", "Marker", "Chalk", "Paint"],
+            correct: "Chalk",
+          },
+          {
+            question: "Which is bigger: an elephant or a mouse?",
+            options: ["Elephant", "Mouse", "They are the same", "Depends"],
+            correct: "Elephant",
+          },
+          {
+            question: "What color do you get when you mix red and white?",
+            options: ["Pink", "Purple", "Orange", "Green"],
+            correct: "Pink",
+          },
+          {
+            question:
+              "If you have 3 red balloons and 2 blue balloons, how many balloons do you have in total?",
+            options: ["4", "5", "6", "7"],
+            correct: "5",
+          },
+          {
+            question: "What is the opposite of 'night'?",
+            options: ["Day", "Morning", "Afternoon", "Evening"],
+            correct: "Day",
+          },
+          {
+            question: "Which tool do you use to cut paper?",
+            options: ["Hammer", "Screwdriver", "Scissors", "Wrench"],
+            correct: "Scissors",
+          },
+          {
+            question: "What do you wear on your feet?",
+            options: ["Hat", "Shirt", "Socks", "Gloves"],
+            correct: "Socks",
+          },
+          {
+            question: "Which is a mode of transportation?",
+            options: ["Bicycle", "Tree", "Book", "Chair"],
+            correct: "Bicycle",
+          },
+        ],
       ];
 
       let currentQuestion = 0;
