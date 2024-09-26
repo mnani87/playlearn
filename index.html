@@ -212,268 +212,475 @@
       // JavaScript for quiz logic
       let questions = [
         // English Questions
+
         {
-          question: "Which word means the same as 'happy'?",
-          options: ["Sad", "Joyful", "Angry", "Tired"],
-          correct: "Joyful",
-        },
-        {
-          question: "What is the opposite of 'big'?",
-          options: ["Small", "Tall", "Wide", "Long"],
-          correct: "Small",
+          question:
+            "Select the subject in the sentence: 'The cat is sleeping on the sofa.'",
+          options: ["is sleeping", "the cat", "on the sofa"],
+          correct: "the cat",
         },
         {
           question:
-            "Choose the noun in the sentence: 'The cat sleeps on the mat.'",
-          options: ["sleeps", "on", "cat", "the"],
+            "Select the subject in the sentence: 'My friends are playing in the park.'",
+          options: ["My friends", "are playing", "in the park"],
+          correct: "My friends",
+        },
+        {
+          question:
+            "Select the subject in the sentence: 'Sara loves to read books.'",
+          options: ["loves", "Sara", "to read books"],
+          correct: "Sara",
+        },
+        {
+          question:
+            "Select the subject in the sentence: 'The birds are singing loudly.'",
+          options: ["are singing", "the birds", "loudly"],
+          correct: "the birds",
+        },
+        {
+          question:
+            "Select the subject in the sentence: 'Our teacher explains the lesson.'",
+          options: ["explains the lesson", "Our teacher", "the lesson"],
+          correct: "Our teacher",
+        },
+        {
+          question:
+            "Select the subject in the sentence: 'Dogs bark at strangers.'",
+          options: ["bark", "Dogs", "at strangers"],
+          correct: "Dogs",
+        },
+        {
+          question:
+            "Select the subject in the sentence: 'The sun shines brightly.'",
+          options: ["shines brightly", "The sun", "brightly"],
+          correct: "The sun",
+        },
+        {
+          question:
+            "Select the subject in the sentence: 'Tom and Jerry are best friends.'",
+          options: ["Tom and Jerry", "are", "best friends"],
+          correct: "Tom and Jerry",
+        },
+        {
+          question:
+            "Select the subject in the sentence: 'Chocolate tastes sweet.'",
+          options: ["Chocolate", "tastes", "sweet"],
+          correct: "Chocolate",
+        },
+        {
+          question:
+            "Select the subject in the sentence: 'The flowers bloom in spring.'",
+          options: ["bloom in spring", "The flowers", "in spring"],
+          correct: "The flowers",
+        },
+        // Predicate Questions
+        {
+          question:
+            "Select the predicate in the sentence: 'The cat is sleeping on the sofa.'",
+          options: ["The cat", "is sleeping on the sofa", "on the sofa"],
+          correct: "is sleeping on the sofa",
+        },
+        {
+          question:
+            "Select the predicate in the sentence: 'My friends are playing in the park.'",
+          options: ["My friends", "are playing in the park", "in the park"],
+          correct: "are playing in the park",
+        },
+        {
+          question:
+            "Select the predicate in the sentence: 'Sara loves to read books.'",
+          options: ["Sara", "loves to read books", "to read books"],
+          correct: "loves to read books",
+        },
+        {
+          question:
+            "Select the predicate in the sentence: 'The birds are singing loudly.'",
+          options: ["The birds", "are singing loudly", "loudly"],
+          correct: "are singing loudly",
+        },
+        {
+          question:
+            "Select the predicate in the sentence: 'Our teacher explains the lesson.'",
+          options: ["Our teacher", "explains the lesson", "the lesson"],
+          correct: "explains the lesson",
+        },
+        {
+          question:
+            "Select the predicate in the sentence: 'Dogs bark at strangers.'",
+          options: ["Dogs", "bark at strangers", "at strangers"],
+          correct: "bark at strangers",
+        },
+        {
+          question:
+            "Select the predicate in the sentence: 'The sun shines brightly.'",
+          options: ["The sun", "shines brightly", "brightly"],
+          correct: "shines brightly",
+        },
+        {
+          question:
+            "Select the predicate in the sentence: 'Tom and Jerry are best friends.'",
+          options: ["Tom and Jerry", "are best friends", "best friends"],
+          correct: "are best friends",
+        },
+        {
+          question:
+            "Select the predicate in the sentence: 'Chocolate tastes sweet.'",
+          options: ["Chocolate", "tastes sweet", "sweet"],
+          correct: "tastes sweet",
+        },
+        {
+          question:
+            "Select the predicate in the sentence: 'The flowers bloom in spring.'",
+          options: ["The flowers", "bloom in spring", "in spring"],
+          correct: "bloom in spring",
+        },
+        // Proper Noun Questions
+        {
+          question:
+            "Choose the proper noun in the sentence: 'London is a big city.'",
+          options: ["city", "London", "big"],
+          correct: "London",
+        },
+        {
+          question:
+            "Choose the proper noun in the sentence: 'Harry Potter is a famous book.'",
+          options: ["book", "famous", "Harry Potter"],
+          correct: "Harry Potter",
+        },
+        {
+          question:
+            "Choose the proper noun in the sentence: 'We visited Disneyland last summer.'",
+          options: ["last summer", "Disneyland", "visited"],
+          correct: "Disneyland",
+        },
+        {
+          question:
+            "Choose the proper noun in the sentence: 'Mount Everest is the tallest mountain.'",
+          options: ["tallest mountain", "Mount Everest", "is"],
+          correct: "Mount Everest",
+        },
+        {
+          question:
+            "Choose the proper noun in the sentence: 'Eiffel Tower is in Paris.'",
+          options: ["Paris", "Eiffel Tower", "in"],
+          correct: "Eiffel Tower",
+        },
+        {
+          question:
+            "Choose the proper noun in the sentence: 'Monday is the first day of the week.'",
+          options: ["day", "Monday", "week"],
+          correct: "Monday",
+        },
+        {
+          question:
+            "Choose the proper noun in the sentence: 'Google is a search engine.'",
+          options: ["search engine", "Google", "is"],
+          correct: "Google",
+        },
+        {
+          question:
+            "Choose the proper noun in the sentence: 'Mrs. Smith is our teacher.'",
+          options: ["teacher", "Mrs. Smith", "our"],
+          correct: "Mrs. Smith",
+        },
+        {
+          question:
+            "Choose the proper noun in the sentence: 'Toyota makes cars.'",
+          options: ["makes", "cars", "Toyota"],
+          correct: "Toyota",
+        },
+        {
+          question:
+            "Choose the proper noun in the sentence: 'Venus is a planet.'",
+          options: ["planet", "Venus", "is"],
+          correct: "Venus",
+        },
+        // Common Noun Questions
+        {
+          question:
+            "Choose the common noun in the sentence: 'The dog is barking.'",
+          options: ["dog", "is barking", "The"],
+          correct: "dog",
+        },
+        {
+          question: "Choose the common noun in the sentence: 'She has a book.'",
+          options: ["She", "has", "book"],
+          correct: "book",
+        },
+        {
+          question:
+            "Choose the common noun in the sentence: 'They went to the school.'",
+          options: ["school", "went", "to"],
+          correct: "school",
+        },
+        {
+          question:
+            "Choose the common noun in the sentence: 'I saw a tree in the park.'",
+          options: ["I", "tree", "park"],
+          correct: "tree",
+        },
+        {
+          question:
+            "Choose the common noun in the sentence: 'He likes to eat an apple.'",
+          options: ["He", "apple", "eat"],
+          correct: "apple",
+        },
+        {
+          question: "Choose the common noun in the sentence: 'The car is red.'",
+          options: ["car", "red", "is"],
+          correct: "car",
+        },
+        {
+          question:
+            "Choose the common noun in the sentence: 'We played with a ball.'",
+          options: ["played", "ball", "We"],
+          correct: "ball",
+        },
+        {
+          question:
+            "Choose the common noun in the sentence: 'She wore a dress.'",
+          options: ["dress", "She", "wore"],
+          correct: "dress",
+        },
+        {
+          question:
+            "Choose the common noun in the sentence: 'There is a cat under the table.'",
+          options: ["cat", "table", "There"],
           correct: "cat",
         },
         {
-          question: "Which word is a verb?",
-          options: ["Run", "Blue", "Quick", "Tree"],
-          correct: "Run",
+          question: "Choose the common noun in the sentence: 'He has a bike.'",
+          options: ["He", "bike", "has"],
+          correct: "bike",
+        },
+        // Feminine Form Questions
+        {
+          question: "Select the correct feminine form of 'Waiter'.",
+          options: ["Waitress", "Waiteress", "Waitero"],
+          correct: "Waitress",
         },
         {
-          question: "What is the plural of 'mouse'?",
-          options: ["dogs", "mice", "mouses", "moose"],
-          correct: "mice",
+          question: "Select the correct feminine form of 'Prince'.",
+          options: ["Princess", "Princessa", "Princesa"],
+          correct: "Princess",
         },
         {
-          question: "Which word completes the sentence: 'She ___ a book.'",
-          options: ["reads", "red", "reed", "ready"],
-          correct: "reads",
+          question: "Select the correct feminine form of 'Actor'.",
+          options: ["Actress", "Actressa", "Actora"],
+          correct: "Actress",
         },
         {
-          question: "Which word is an adjective?",
-          options: ["Quickly", "Blue", "Run", "Happiness"],
-          correct: "Blue",
+          question: "Select the correct feminine form of 'King'.",
+          options: ["Queen", "Kingsa", "Queena"],
+          correct: "Queen",
         },
         {
-          question: "Choose the correct spelling:",
-          options: ["Thier", "Their", "There", "Thear"],
-          correct: "Their",
+          question: "Select the correct feminine form of 'Hero'.",
+          options: ["Heroine", "Heroin", "Heriona"],
+          correct: "Heroine",
         },
         {
-          question: "What is the past tense of 'jump'?",
-          options: ["Jumped", "Jumps", "Jumping", "Jumper"],
-          correct: "Jumped",
+          question: "Select the correct feminine form of 'Man'.",
+          options: ["Woman", "Mans", "Woma"],
+          correct: "Woman",
         },
         {
-          question: "Which word rhymes with 'cat'?",
-          options: ["Dog", "Hat", "Sun", "Tree"],
-          correct: "Hat",
+          question: "Select the correct feminine form of 'Boy'.",
+          options: ["Girl", "Girla", "Gurl"],
+          correct: "Girl",
         },
         {
-          question: "Choose the correct meaning for 'don't':",
-          options: ["donut", "doesnot", "did not", "dont not"],
-          correct: "do not",
+          question: "Select the correct feminine form of 'Father'.",
+          options: ["Mother", "Mothera", "Fathera"],
+          correct: "Mother",
         },
         {
-          question: "Which sentence is correct?",
-          options: [
-            "She go to school.",
-            "She goes to school.",
-            "She going to school.",
-            "She gone to school.",
-          ],
-          correct: "She goes to school.",
+          question: "Select the correct feminine form of 'Brother'.",
+          options: ["Sister", "Sistera", "Brotha"],
+          correct: "Sister",
+        },
+        // 'Was' or 'Were' Questions
+        {
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'Yesterday, I ___ at the park.'",
+          options: ["was", "were"],
+          correct: "was",
         },
         {
-          question: "What is the synonym of 'quick'?",
-          options: ["Fast", "Slow", "Heavy", "Bright"],
-          correct: "Fast",
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'They ___ playing soccer.'",
+          options: ["was", "were"],
+          correct: "were",
         },
         {
-          question: "Which word is a preposition?",
-          options: ["Under", "Happy", "Run", "Blue"],
-          correct: "Under",
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'She ___ happy with her gift.'",
+          options: ["was", "were"],
+          correct: "was",
         },
         {
-          question: "Choose the correct form: 'They ___ playing.'",
-          options: ["is", "are", "was", "be"],
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'We ___ late for the movie.'",
+          options: ["was", "were"],
+          correct: "were",
+        },
+        {
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'He ___ a good student.'",
+          options: ["was", "were"],
+          correct: "was",
+        },
+        {
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'The dogs ___ barking all night.'",
+          options: ["was", "were"],
+          correct: "were",
+        },
+        {
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'It ___ raining yesterday.'",
+          options: ["was", "were"],
+          correct: "was",
+        },
+        {
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'You ___ very kind.'",
+          options: ["was", "were"],
+          correct: "were",
+        },
+        {
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'The cookies ___ delicious.'",
+          options: ["was", "were"],
+          correct: "were",
+        },
+        {
+          question:
+            "Choose 'was' or 'were' to complete the sentence: 'I ___ at home last weekend.'",
+          options: ["was", "were"],
+          correct: "was",
+        },
+        // 'A,' 'An,' or 'The' Questions
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'I saw ___ elephant at the zoo.'",
+          options: ["a", "an", "the"],
+          correct: "an",
+        },
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'She has ___ cat.'",
+          options: ["a", "an", "the"],
+          correct: "a",
+        },
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: '___ sun is bright today.'",
+          options: ["a", "an", "the"],
+          correct: "the",
+        },
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'He wants to be ___ astronaut.'",
+          options: ["a", "an", "the"],
+          correct: "an",
+        },
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'Can you pass me ___ book on the table?'",
+          options: ["a", "an", "the"],
+          correct: "the",
+        },
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'They are going to watch ___ movie tonight.'",
+          options: ["a", "an", "the"],
+          correct: "a",
+        },
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'She ate ___ apple for a snack.'",
+          options: ["a", "an", "the"],
+          correct: "an",
+        },
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: '___ moon looks beautiful.'",
+          options: ["a", "an", "the"],
+          correct: "the",
+        },
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'I need ___ umbrella.'",
+          options: ["a", "an", "the"],
+          correct: "an",
+        },
+        {
+          question:
+            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'He found ___ old coin.'",
+          options: ["a", "an", "the"],
+          correct: "an",
+        },
+        // Verb 'To Be' Questions
+        {
+          question:
+            "Choose the correct word to complete the sentence: 'I ___ happy today.'",
+          options: ["am", "is", "are", "have", "has"],
+          correct: "am",
+        },
+        {
+          question:
+            "Choose the correct word to complete the sentence: 'She ___ a new bike.'",
+          options: ["am", "is", "are", "have", "has"],
+          correct: "has",
+        },
+        {
+          question:
+            "Choose the correct word to complete the sentence: 'They ___ playing in the garden.'",
+          options: ["am", "is", "are", "have", "has"],
           correct: "are",
         },
         {
-          question: "What is the antonym of 'hot'?",
-          options: ["Warm", "Cold", "Loud", "Bright"],
-          correct: "Cold",
+          question:
+            "Choose the correct word to complete the sentence: 'We ___ a big house.'",
+          options: ["am", "is", "are", "have", "has"],
+          correct: "have",
         },
-        {
-          question: "Which word starts with a vowel?",
-          options: ["Cat", "Elephant", "Dog", "Fish"],
-          correct: "Elephant",
-        },
-
-        // Maths Questions
-        {
-          question: "What is 5 + 3?",
-          options: ["6", "7", "8", "9"],
-          correct: "8",
-        },
-        {
-          question: "What is 10 - 4?",
-          options: ["5", "6", "7", "8"],
-          correct: "6",
-        },
-        {
-          question: "What comes after 12?",
-          options: ["13", "11", "14", "10"],
-          correct: "13",
-        },
-        {
-          question: "What is 2 x 3?",
-          options: ["5", "6", "7", "8"],
-          correct: "6",
-        },
-        {
-          question: "What is half of 10?",
-          options: ["3", "4", "5", "6"],
-          correct: "5",
-        },
-        {
-          question: "What is the number before 20?",
-          options: ["19", "18", "21", "17"],
-          correct: "19",
-        },
-        {
-          question: "What is 9 divided by 3?",
-          options: ["1", "2", "3", "4"],
-          correct: "3",
-        },
-        {
-          question: "How many sides does a triangle have?",
-          options: ["2", "3", "4", "5"],
-          correct: "3",
-        },
-        {
-          question: "What is 7 + 2?",
-          options: ["8", "9", "10", "11"],
-          correct: "9",
-        },
-        {
-          question: "What is 15 - 5?",
-          options: ["9", "10", "11", "12"],
-          correct: "10",
-        },
-        {
-          question: "What comes before 7?",
-          options: ["5", "6", "8", "9"],
-          correct: "6",
-        },
-        {
-          question: "What is 4 x 2?",
-          options: ["6", "7", "8", "9"],
-          correct: "8",
-        },
-        {
-          question: "What is the next number in the sequence: 2, 4, 6, ___?",
-          options: ["7", "8", "9", "10"],
-          correct: "8",
-        },
-        {
-          question: "How many minutes are in one hour?",
-          options: ["30", "45", "60", "90"],
-          correct: "60",
-        },
-
-        {
-          question: "What is 3 + 3 + 3?",
-          options: ["6", "7", "8", "9"],
-          correct: "9",
-        },
-        {
-          question: "What number is missing: 5, __, 15?",
-          options: ["10", "12", "14", "16"],
-          correct: "10",
-        },
-
-        // Logic Questions
         {
           question:
-            "If you have two apples and you eat one, how many apples are left?",
-          options: ["0", "1", "2", "3"],
-          correct: "1",
+            "Choose the correct word to complete the sentence: 'He ___ a pet dog.'",
+          options: ["am", "is", "are", "have", "has"],
+          correct: "has",
         },
         {
-          question: "What comes next: Monday, Tuesday, Wednesday, ___?",
-          options: ["Friday", "Thursday", "Sunday", "Saturday"],
-          correct: "Thursday",
+          question:
+            "Choose the correct word to complete the sentence: 'You ___ my best friend.'",
+          options: ["am", "is", "are", "have", "has"],
+          correct: "are",
         },
         {
-          question: "Which shape has four equal sides?",
-          options: ["Rectangle", "Triangle", "Square", "Circle"],
-          correct: "Square",
+          question:
+            "Choose the correct word to complete the sentence: 'The cat ___ sleeping.'",
+          options: ["am", "is", "are", "have", "has"],
+          correct: "is",
         },
         {
-          question: "What is the opposite of 'up'?",
-          options: ["Down", "Left", "Right", "Forward"],
-          correct: "Down",
+          question:
+            "Choose the correct word to complete the sentence: 'I ___ a brother and a sister.'",
+          options: ["am", "is", "are", "have", "has"],
+          correct: "have",
         },
         {
-          question: "If today is Monday, what day was yesterday?",
-          options: ["Sunday", "Tuesday", "Wednesday", "Thursday"],
-          correct: "Sunday",
+          question:
+            "Choose the correct word to complete the sentence: 'She ___ two books.'",
+          options: ["am", "is", "are", "have", "has"],
+          correct: "has",
         },
         {
-          question: "Which animal is known as the king of the jungle?",
-          options: ["Elephant", "Tiger", "Lion", "Giraffe"],
-          correct: "Lion",
-        },
-        {
-          question: "What do bees make?",
-          options: ["Milk", "Honey", "Silk", "Wax"],
-          correct: "Honey",
-        },
-        {
-          question: "What is the first letter of the word 'Apple'?",
-          options: ["A", "B", "C", "D"],
-          correct: "A",
-        },
-        {
-          question: "How many legs does a spider have?",
-          options: ["6", "8", "10", "12"],
-          correct: "8",
-        },
-        {
-          question: "Which one is a fruit?",
-          options: ["Carrot", "Apple", "Potato", "Spinach"],
-          correct: "Apple",
-        },
-        {
-          question: "What do you use to write on a blackboard?",
-          options: ["Crayon", "Marker", "Chalk", "Paint"],
-          correct: "Chalk",
-        },
-        {
-          question: "Which is bigger: an elephant or a mouse?",
-          options: ["Elephant", "Mouse", "They are the same", "Depends"],
-          correct: "Elephant",
-        },
-        {
-          question: "What color do you get when you mix red and white?",
-          options: ["Pink", "Purple", "Orange", "Green"],
-          correct: "Pink",
-        },
-
-        {
-          question: "What is the opposite of 'night'?",
-          options: ["Day", "Morning", "Afternoon", "Evening"],
-          correct: "Day",
-        },
-        {
-          question: "Which tool do you use to cut paper?",
-          options: ["Hammer", "Screwdriver", "Scissors", "Wrench"],
-          correct: "Scissors",
-        },
-        {
-          question: "What do you wear on your feet?",
-          options: ["Hat", "Shirt", "Socks", "Gloves"],
-          correct: "Socks",
-        },
-        {
-          question: "Which is a mode of transportation?",
-          options: ["Bicycle", "Tree", "Book", "Chair"],
-          correct: "Bicycle",
+          question:
+            "Choose the correct word to complete the sentence: 'We ___ going to the park.'",
+          options: ["am", "is", "are", "have", "has"],
+          correct: "are",
         },
       ];
 
@@ -496,7 +703,9 @@
         let optionsHtml = "";
 
         question.options.forEach((option) => {
-          optionsHtml += `<button class="option" onclick="checkAnswer(event, '${option}')">${option}</button>`;
+          // Escape single quotes in options to prevent breaking the onclick attribute
+          let safeOption = option.replace(/'/g, "\\'");
+          optionsHtml += `<button class="option" onclick="checkAnswer(event, '${safeOption}')">${option}</button>`;
         });
 
         questionContainer.innerHTML = `
