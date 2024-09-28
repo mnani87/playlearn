@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>English Mock Test for Kids</title>
+    <title>Mock Test for Kids</title>
 
     <style>
       body {
@@ -201,7 +201,7 @@
     </style>
   </head>
   <body>
-    <h1>Have fun with English Grammar!!!</h1>
+    <h1>Have fun with Science!!!</h1>
     <button id="next-btn" onclick="nextQuestion()">Next Question</button>
 
     <div id="quiz-container">
@@ -214,318 +214,309 @@
       // JavaScript for quiz logic
       let questions = [
         {
-          question: `Read the passage:
-    "Emma loved exploring the forest near her house. Every weekend, she would pack a small bag with a bottle of water, a sandwich, and her favorite book. 
-    The forest was full of tall trees, chirping birds, and colorful flowers. Emma liked to sit by the old oak tree, where the sunlight filtered through the leaves, 
-    creating beautiful patterns on the ground.
-
-    One Saturday, as Emma was reading her book, she heard a rustling sound. She looked up and saw a small rabbit hopping out from behind a bush. The rabbit looked at her curiously 
-    before disappearing into the woods. Emma smiled, feeling happy to be surrounded by nature."
-
-    What did Emma pack in her bag for her trips to the forest?`,
-          options: [
-            "Water, a sandwich, and a book.",
-            "Snacks, a toy, and a book.",
-            "Water, snacks, and a blanket.",
-          ],
-          correct: "Water, a sandwich, and a book.",
+          question:
+            "The part of the body that helps us breathe is the __________.",
+          options: ["lungs", "heart", "stomach"],
+          correct: "lungs",
         },
         {
-          question: `Read the passage:
-    "Emma loved exploring the forest near her house. Every weekend, she would pack a small bag with a bottle of water, a sandwich, and her favorite book. 
-    The forest was full of tall trees, chirping birds, and colorful flowers. Emma liked to sit by the old oak tree, where the sunlight filtered through the leaves, 
-    creating beautiful patterns on the ground.
-
-    One Saturday, as Emma was reading her book, she heard a rustling sound. She looked up and saw a small rabbit hopping out from behind a bush. The rabbit looked at her curiously 
-    before disappearing into the woods. Emma smiled, feeling happy to be surrounded by nature."
-
-    Where did Emma like to sit in the forest?`,
-          options: ["By a stream.", "Near the old oak tree.", "On a big rock."],
-          correct: "Near the old oak tree.",
+          question: "Water from rivers and lakes is used for __________.",
+          options: ["drinking", "building", "heating"],
+          correct: "drinking",
         },
         {
-          question: `Read the passage:
-    "Emma loved exploring the forest near her house. Every weekend, she would pack a small bag with a bottle of water, a sandwich, and her favorite book. 
-    The forest was full of tall trees, chirping birds, and colorful flowers. Emma liked to sit by the old oak tree, where the sunlight filtered through the leaves, 
-    creating beautiful patterns on the ground.
-
-    One Saturday, as Emma was reading her book, she heard a rustling sound. She looked up and saw a small rabbit hopping out from behind a bush. The rabbit looked at her curiously 
-    before disappearing into the woods. Emma smiled, feeling happy to be surrounded by nature."
-
-    What did Emma hear while she was reading her book?`,
-          options: [
-            "A bird chirping.",
-            "A rustling sound.",
-            "The wind blowing.",
-          ],
-          correct: "A rustling sound.",
+          question: "__________ are man-made things that help us build houses.",
+          options: ["Bricks", "Trees", "Rocks"],
+          correct: "Bricks",
         },
         {
-          question: `Read the passage:
-    "Emma loved exploring the forest near her house. Every weekend, she would pack a small bag with a bottle of water, a sandwich, and her favorite book. 
-    The forest was full of tall trees, chirping birds, and colorful flowers. Emma liked to sit by the old oak tree, where the sunlight filtered through the leaves, 
-    creating beautiful patterns on the ground.
-
-    One Saturday, as Emma was reading her book, she heard a rustling sound. She looked up and saw a small rabbit hopping out from behind a bush. The rabbit looked at her curiously 
-    before disappearing into the woods. Emma smiled, feeling happy to be surrounded by nature."
-
-    What animal did Emma see in the forest?`,
-          options: ["A squirrel.", "A fox.", "A rabbit."],
-          correct: "A rabbit.",
-        },
-        {
-          question: `Read the passage:
-    "Emma loved exploring the forest near her house. Every weekend, she would pack a small bag with a bottle of water, a sandwich, and her favorite book. 
-    The forest was full of tall trees, chirping birds, and colorful flowers. Emma liked to sit by the old oak tree, where the sunlight filtered through the leaves, 
-    creating beautiful patterns on the ground.
-
-    One Saturday, as Emma was reading her book, she heard a rustling sound. She looked up and saw a small rabbit hopping out from behind a bush. The rabbit looked at her curiously 
-    before disappearing into the woods. Emma smiled, feeling happy to be surrounded by nature."
-
-    How did Emma feel after seeing the rabbit?`,
-          options: ["Scared.", "Happy.", "Confused."],
-          correct: "Happy.",
+          question: "The __________ protects our heart.",
+          options: ["rib cage", "muscle", "brain"],
+          correct: "rib cage",
         },
         {
           question:
-            "Select the subject in the sentence: 'The dog chased the ball.'",
-          options: ["The dog", "chased", "the ball"],
-          correct: "The dog",
+            "We should drink at least __________ glasses of water every day.",
+          options: ["8", "4", "2"],
+          correct: "8",
         },
         {
-          question: "Select the subject in the sentence: 'The baby is crying.'",
-          options: ["The baby", "is", "crying"],
-          correct: "The baby",
+          question: "The sun is a __________ object.",
+          options: ["natural", "human-made", "synthetic"],
+          correct: "natural",
         },
         {
-          question:
-            "Select the subject in the sentence: 'The children are playing soccer.'",
-          options: ["The children", "are playing", "soccer"],
-          correct: "The children",
+          question: "Our bones and muscles help us __________.",
+          options: ["move", "breathe", "think"],
+          correct: "move",
         },
         {
-          question:
-            "Select the subject in the sentence: 'The car stopped suddenly.'",
-          options: ["The car", "stopped", "suddenly"],
-          correct: "The car",
-        },
-        {
-          question:
-            "Select the subject in the sentence: 'My brother loves ice cream.'",
-          options: ["My brother", "loves", "ice cream"],
-          correct: "My brother",
-        },
-        // Predicate Questions
-        {
-          question:
-            "Select the predicate in the sentence: 'The dog chased the ball.'",
-          options: ["The dog", "chased the ball", "the ball"],
-          correct: "chased the ball",
+          question: "The main source of drinking water is __________.",
+          options: ["rain", "juice", "soda"],
+          correct: "rain",
         },
         {
           question:
-            "Select the predicate in the sentence: 'The baby is crying.'",
-          options: ["The baby", "is crying", "crying"],
-          correct: "is crying",
+            "A __________ is something we can see, touch, and use, like a pencil.",
+          options: ["human-made thing", "natural thing", "living thing"],
+          correct: "human-made thing",
+        },
+        {
+          question: "The __________ system helps in digesting food.",
+          options: ["digestive", "respiratory", "nervous"],
+          correct: "digestive",
+        },
+        {
+          question: "The __________ brings oxygen to all parts of our body.",
+          options: ["blood", "stomach", "brain"],
+          correct: "blood",
+        },
+        {
+          question: "Water can change into __________ when it is heated.",
+          options: ["steam", "ice", "cloud"],
+          correct: "steam",
+        },
+        {
+          question: "Trees and plants give us __________.",
+          options: ["oxygen", "water", "shelter"],
+          correct: "oxygen",
+        },
+        {
+          question: "The __________ pumps blood in our body.",
+          options: ["heart", "lungs", "liver"],
+          correct: "heart",
+        },
+        {
+          question: "We need __________ to breathe and stay alive.",
+          options: ["air", "light", "food"],
+          correct: "air",
+        },
+        {
+          question: "Our body needs __________ to stay hydrated.",
+          options: ["water", "milk", "juice"],
+          correct: "water",
+        },
+        {
+          question: "__________ is a human-made material used to build things.",
+          options: ["Plastic", "Wood", "Stone"],
+          correct: "Plastic",
+        },
+        {
+          question: "The __________ helps filter waste from our blood.",
+          options: ["kidney", "heart", "lungs"],
+          correct: "kidney",
+        },
+        {
+          question: "Rainwater collects in __________ and rivers.",
+          options: ["lakes", "seas", "pools"],
+          correct: "lakes",
+        },
+        {
+          question: "__________ is an example of a natural resource.",
+          options: ["Water", "Plastic", "Car"],
+          correct: "Water",
+        },
+        {
+          question: "Bones in our body help us to stand.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "Water is only used for drinking.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Bricks are a natural object.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "The heart is part of the digestive system.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Air has no weight.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Plants make their own food using sunlight.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "All animals need water to survive.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "Trees and plants are examples of human-made things.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Water is found in oceans, rivers, and lakes.",
+          options: ["True", "False"],
+          correct: "True",
         },
         {
           question:
-            "Select the predicate in the sentence: 'The children are playing soccer.'",
-          options: ["The children", "are playing soccer", "soccer"],
-          correct: "are playing soccer",
+            "The air around us contains oxygen, which we need to breathe.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "The sun is a human-made object.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Our stomach helps us breathe.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Rivers are a source of natural water.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "Air is everywhere around us.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "Plastic is a natural material.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "We should drink water only when we feel thirsty.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "The brain controls all the functions in our body.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "The earth is covered with water, air, and land.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "A table is an example of a natural object.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Water can turn into ice when it is frozen.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "Bones in our body help us to stand.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "Water is only used for drinking.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Bricks are a natural object.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "The heart is part of the digestive system.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Air has no weight.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Plants make their own food using sunlight.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "All animals need water to survive.",
+          options: ["True", "False"],
+          correct: "True",
+        },
+        {
+          question: "Trees and plants are examples of human-made things.",
+          options: ["True", "False"],
+          correct: "False",
+        },
+        {
+          question: "Water is found in oceans, rivers, and lakes.",
+          options: ["True", "False"],
+          correct: "True",
         },
         {
           question:
-            "Select the predicate in the sentence: 'The car stopped suddenly.'",
-          options: ["The car", "stopped suddenly", "suddenly"],
-          correct: "stopped suddenly",
+            "The air around us contains oxygen, which we need to breathe.",
+          options: ["True", "False"],
+          correct: "True",
         },
         {
-          question:
-            "Select the predicate in the sentence: 'My brother loves ice cream.'",
-          options: ["My brother", "loves ice cream", "ice cream"],
-          correct: "loves ice cream",
-        },
-        // Proper Noun Questions
-        {
-          question:
-            "Choose the proper noun in the sentence: 'Alice won the race.'",
-          options: ["Alice", "won", "race"],
-          correct: "Alice",
+          question: "The sun is a human-made object.",
+          options: ["True", "False"],
+          correct: "False",
         },
         {
-          question:
-            "Choose the proper noun in the sentence: 'We visited the Statue of Liberty.'",
-          options: ["visited", "Statue of Liberty", "we"],
-          correct: "Statue of Liberty",
+          question: "Our stomach helps us breathe.",
+          options: ["True", "False"],
+          correct: "False",
         },
         {
-          question:
-            "Choose the proper noun in the sentence: 'The Amazon River is the longest in the world.'",
-          options: ["Amazon River", "longest", "world"],
-          correct: "Amazon River",
+          question: "Rivers are a source of natural water.",
+          options: ["True", "False"],
+          correct: "True",
         },
         {
-          question:
-            "Choose the proper noun in the sentence: 'My birthday is in December.'",
-          options: ["birthday", "December", "in"],
-          correct: "December",
+          question: "Air is everywhere around us.",
+          options: ["True", "False"],
+          correct: "True",
         },
         {
-          question:
-            "Choose the proper noun in the sentence: 'Mount Everest is a famous mountain.'",
-          options: ["Mount Everest", "famous", "mountain"],
-          correct: "Mount Everest",
-        },
-        // Common Noun Questions
-        {
-          question:
-            "Choose the common noun in the sentence: 'The cat jumped on the table.'",
-          options: ["cat", "jumped", "table"],
-          correct: "cat",
+          question: "Plastic is a natural material.",
+          options: ["True", "False"],
+          correct: "False",
         },
         {
-          question:
-            "Choose the common noun in the sentence: 'I have a pencil.'",
-          options: ["pencil", "have", "I"],
-          correct: "pencil",
+          question: "We should drink water only when we feel thirsty.",
+          options: ["True", "False"],
+          correct: "False",
         },
         {
-          question:
-            "Choose the common noun in the sentence: 'We went to the library.'",
-          options: ["went", "library", "to"],
-          correct: "library",
+          question: "The brain controls all the functions in our body.",
+          options: ["True", "False"],
+          correct: "True",
         },
         {
-          question:
-            "Choose the common noun in the sentence: 'She loves reading books.'",
-          options: ["reading", "She", "books"],
-          correct: "books",
+          question: "The earth is covered with water, air, and land.",
+          options: ["True", "False"],
+          correct: "True",
         },
         {
-          question:
-            "Choose the common noun in the sentence: 'He is sitting on a chair.'",
-          options: ["chair", "sitting", "on"],
-          correct: "chair",
-        },
-        // Feminine Form Questions
-        {
-          question: "Select the correct feminine form of 'Emperor'.",
-          options: ["Empress", "Emperorina", "Empero"],
-          correct: "Empress",
+          question: "A table is an example of a natural object.",
+          options: ["True", "False"],
+          correct: "False",
         },
         {
-          question: "Select the correct feminine form of 'Lion'.",
-          options: ["Lioness", "Liona", "Lionino"],
-          correct: "Lioness",
-        },
-        {
-          question: "Select the correct feminine form of 'Duke'.",
-          options: ["Duchess", "Duchesa", "Duko"],
-          correct: "Duchess",
-        },
-        {
-          question: "Select the correct feminine form of 'Host'.",
-          options: ["Hostess", "Hostina", "Hostessa"],
-          correct: "Hostess",
-        },
-        {
-          question: "Select the correct feminine form of 'Tiger'.",
-          options: ["Tigress", "Tigerina", "Tigero"],
-          correct: "Tigress",
-        },
-        // 'Was' or 'Were' Questions
-        {
-          question:
-            "Choose 'was' or 'were' to complete the sentence: 'Last night, they ___ at the concert.'",
-          options: ["was", "were"],
-          correct: "were",
-        },
-        {
-          question:
-            "Choose 'was' or 'were' to complete the sentence: 'It ___ raining yesterday.'",
-          options: ["was", "were"],
-          correct: "was",
-        },
-        {
-          question:
-            "Choose 'was' or 'were' to complete the sentence: 'We ___ so excited for the trip.'",
-          options: ["was", "were"],
-          correct: "were",
-        },
-        {
-          question:
-            "Choose 'was' or 'were' to complete the sentence: 'She ___ very tired after the race.'",
-          options: ["was", "were"],
-          correct: "was",
-        },
-        {
-          question:
-            "Choose 'was' or 'were' to complete the sentence: 'They ___ happy with their new puppy.'",
-          options: ["was", "were"],
-          correct: "were",
-        },
-        // 'A,' 'An,' or 'The' Questions
-        {
-          question:
-            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'There is ___ rainbow in the sky.'",
-          options: ["a", "an", "the"],
-          correct: "a",
-        },
-        {
-          question:
-            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'I ate ___ orange this morning.'",
-          options: ["a", "an", "the"],
-          correct: "an",
-        },
-        {
-          question:
-            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'He is ___ best player on the team.'",
-          options: ["a", "an", "the"],
-          correct: "the",
-        },
-        {
-          question:
-            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'She needs ___ pen to write a letter.'",
-          options: ["a", "an", "the"],
-          correct: "a",
-        },
-        {
-          question:
-            "Choose 'a,' 'an,' or 'the' to complete the sentence: 'They are watching ___ movie tonight.'",
-          options: ["a", "an", "the"],
-          correct: "a",
-        },
-        // Verb 'To Be' Questions
-        {
-          question:
-            "Choose the correct word to complete the sentence: 'They ___ happy to see their friends.'",
-          options: ["am", "is", "are", "have", "has"],
-          correct: "are",
-        },
-        {
-          question:
-            "Choose the correct word to complete the sentence: 'She ___ a new dress.'",
-          options: ["am", "is", "are", "have", "has"],
-          correct: "has",
-        },
-        {
-          question:
-            "Choose the correct word to complete the sentence: 'We ___ playing in the garden.'",
-          options: ["am", "is", "are", "have", "has"],
-          correct: "are",
-        },
-        {
-          question:
-            "Choose the correct word to complete the sentence: 'I ___ very hungry.'",
-          options: ["am", "is", "are", "have", "has"],
-          correct: "am",
-        },
-        {
-          question:
-            "Choose the correct word to complete the sentence: 'The cat ___ sleeping on the couch.'",
-          options: ["am", "is", "are", "have", "has"],
-          correct: "is",
+          question: "Water can turn into ice when it is frozen.",
+          options: ["True", "False"],
+          correct: "True",
         },
       ];
 
@@ -536,9 +527,9 @@
         if (currentQuestion >= questions.length) {
           // Display the final result
           document.getElementById("question-container").innerHTML = `
-                <h2>Test Completed!</h2>
-                <p>Your total points: ${score} / ${questions.length}</p>
-            `;
+                      <h2>Test Completed!</h2>
+                      <p>Your total points: ${score} / ${questions.length}</p>
+                  `;
           document.getElementById("next-btn").style.display = "none";
           return;
         }
@@ -554,9 +545,9 @@
         });
 
         questionContainer.innerHTML = `
-                <div class="question">${question.question}</div>
-                <div class="options">${optionsHtml}</div>
-            `;
+                      <div class="question">${question.question}</div>
+                      <div class="options">${optionsHtml}</div>
+                  `;
       }
 
       function createFireworks() {
